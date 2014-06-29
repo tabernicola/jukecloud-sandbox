@@ -1,0 +1,28 @@
+Tabernicola\JukeCloudBundle\Entity\Disk:
+    type: entity
+    table: Disk
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+    manyToOne:
+        artist:
+            targetEntity: Artist
+            inversedBy: disks
+    oneToMany:
+        songs:
+            targetEntity: Song
+            mappedBy: disk
+    lifecycleCallbacks: {  }

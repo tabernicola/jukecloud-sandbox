@@ -1,0 +1,23 @@
+tabernicola_juke_cloud_homepage:
+    pattern:  /
+    defaults: { _controller: TabernicolaJukeCloudBundle:Home:index }
+
+tabernicola_juke_cloud_types:
+    pattern:  /ajax/types/
+    defaults: { _controller: TabernicolaJukeCloudBundle:Home:types }
+
+tabernicola_juke_cloud_artists:
+    pattern:  /ajax/artists/
+    defaults: { _controller: TabernicolaJukeCloudBundle:Home:artists }
+
+tabernicola_juke_cloud_artist_disks:
+    pattern:  /ajax/artist-{id}/
+    defaults: { _controller: TabernicolaJukeCloudBundle:Home:artistDisks }
+    requirements:
+        id: \d+
+        
+tabernicola_juke_cloud_disk_songs:
+    pattern:  /ajax/disk-{id}/
+    defaults: { _controller: TabernicolaJukeCloudBundle:Home:diskSongs }
+    requirements:
+        id: \d+

@@ -1,0 +1,4 @@
+tabernicola_juke_cloud:
+    resource: "@TabernicolaJukeCloudBundle/Resources/config/routing.yml"
+    prefix:   /
+
