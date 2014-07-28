@@ -71,6 +71,7 @@ class HomeController extends Controller
         $disk = $em->getRepository('TabernicolaJukeCloudBundle:Disk')->findOneById($id);
         $songs = $em->getRepository('TabernicolaJukeCloudBundle:Song')
                         ->findBy(array('disk'=>$disk), array('title' => 'ASC'));
+        $data=array();
         foreach ($songs as $song) {
             $node=new \stdClass();
             $node->id= 'song-'.$song->getId();
@@ -82,5 +83,40 @@ class HomeController extends Controller
         }
         $response = new JsonResponse();
         return $response->setData($data);
+    }
+    
+    public function filterAction($search)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $songs = $em->getRepository('TabernicolaJukeCloudBundle:Song')->search($search);
+        $data=array();
+        $root=new \stdClass();
+        $root->id= 'artists';
+        $root->text= 'All the music';
+        $root->type='root';
+        $root->children=array();
+        $lastArtist=$lastDisk=0;
+        $artistIndex=-1;
+        $state=new \stdClass();
+        $state->opened=true;
+        foreach ($songs as $song) {
+            if ($lastArtist!=$song->getArtist()->getId()){
+                $lastArtist=$song->getArtist()->getId();
+                $artistIndex++;
+                $diskIndex=-1;
+                $root->children[]=$song->getArtist()->toObject();
+                $root->children[$artistIndex]->state=$state;
+            }
+            if ($lastDisk!=$song->getDisk()->getId()){
+                $lastDisk=$song->getDisk()->getId();
+                $diskIndex++;
+                $root->children[$artistIndex]->children[]=$song->getDisk()->toObject();
+                $root->children[$artistIndex]->children[$diskIndex]->state=$state;
+            }
+            $root->children[$artistIndex]->children[$diskIndex]->children[]=$song->toObject();
+        }
+        $response = new JsonResponse();
+        return $response->setData(array($root));
     }
 }

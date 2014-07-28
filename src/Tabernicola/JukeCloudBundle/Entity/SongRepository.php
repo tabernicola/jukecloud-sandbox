@@ -3,7 +3,7 @@
 namespace Tabernicola\JukeCloudBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
-
+use Doctrine\ORM\Query\Expr\Join;
 /**
  * SongRepository
  *
@@ -12,4 +12,19 @@ use Doctrine\ORM\EntityRepository;
  */
 class SongRepository extends EntityRepository
 {
+    public function search($q){
+        $qb = $this->createQueryBuilder('s');
+
+        $qb->select('s')
+            ->innerJoin('s.disk', 'd')
+            ->innerJoin('s.artist', 'a')
+            ->where('s.title LIKE :q')
+            ->orWhere('d.title LIKE :q')
+            ->orWhere('a.name LIKE :q')
+            ->orderBy('a.name','ASC')
+            ->addorderBy('d.title','ASC')
+            ->addorderBy('s.id','ASC')
+            ->setParameter('q', "%$q%");
+        return $qb->getQuery()->getResult();
+    }
 }

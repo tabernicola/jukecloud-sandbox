@@ -1,0 +1,11 @@
+Tabernicola\JukeCloudBundle\Entity\Song:
+    properties:
+        file:
+            - File:
+                maxSize:15000000
+        title:
+            - NotBlank: ~
+        disk:
+            - NotNull: ~
+        band:
+            - NotNull: ~

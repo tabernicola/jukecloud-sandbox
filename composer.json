@@ -24,7 +24,8 @@
         "components/jqueryui": "dev-master",
         "components/jqueryui-theme-bootstrap": "dev-master",
         "components/jplayer": "dev-master",
-        "doctrine/doctrine-fixtures-bundle": "2.2.*"
+        "doctrine/doctrine-fixtures-bundle": "2.2.*",
+        "blueimp/jquery-file-upload": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

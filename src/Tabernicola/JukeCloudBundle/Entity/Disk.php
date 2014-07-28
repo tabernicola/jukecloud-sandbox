@@ -138,4 +138,13 @@ class Disk
     {
         return $this->artist;
     }
+    
+    public function toObject(){
+        $node=new \stdClass();
+        $node->id= 'disk-'.$this->getId();
+        $node->text= $this->getTitle();
+        $node->type='disk';
+        $node->children = array();
+        return $node;
+    }
 }

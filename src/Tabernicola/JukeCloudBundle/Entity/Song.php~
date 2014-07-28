@@ -121,4 +121,41 @@ class Song
     {
         return $this->artist;
     }
+    /**
+     * @var string
+     */
+    private $path;
+
+
+    /**
+     * Set path
+     *
+     * @param string $path
+     * @return Song
+     */
+    public function setPath($path)
+    {
+        $this->path = $path;
+
+        return $this;
+    }
+
+    /**
+     * Get path
+     *
+     * @return string 
+     */
+    public function getPath()
+    {
+        return $this->path;
+    }
+    
+    public function toObject(){
+        $node=new \stdClass();
+        $node->id= 'song-'.$this->getId();
+        $node->text= $this->getTitle();
+        $node->type='song';
+        $node->children = false;
+        return $node;
+    }
 }

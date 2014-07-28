@@ -136,4 +136,13 @@ class Artist
     {
         return $this->songs;
     }
+    
+    public function toObject(){
+        $node=new \stdClass();
+        $node->id= 'artist-'.$this->getId();
+        $node->text= $this->getName();
+        $node->type='artist';
+        $node->children = array();
+        return $node;
+    }
 }

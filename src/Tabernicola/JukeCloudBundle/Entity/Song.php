@@ -29,7 +29,11 @@ class Song
      */
     private $artist;
 
-
+    /**
+     * @var file
+     */
+    private $files;
+    
     /**
      * Set id
      *
@@ -149,4 +153,62 @@ class Song
     {
         return $this->path;
     }
+    
+    public function toObject(){
+        $node=new \stdClass();
+        $node->id= 'song-'.$this->getId();
+        $node->text= $this->getTitle();
+        $node->type='song';
+        $node->children = false;
+        return $node;
+    }
+    /**
+     * @var integer
+     */
+    private $number;
+
+
+    /**
+     * Set number
+     *
+     * @param integer $number
+     * @return Song
+     */
+    public function setNumber($number)
+    {
+        $this->number = $number;
+
+        return $this;
+    }
+
+    /**
+     * Get number
+     *
+     * @return integer 
+     */
+    public function getNumber()
+    {
+        return $this->number;
+    }
+    
+    /**
+     * Sets files.
+     *
+     * @param UploadedFile $files
+     */
+    public function setFiles($files = null)
+    {
+        $this->files = $files;
+    }
+
+    /**
+     * Get files.
+     *
+     * @return UploadedFile
+     */
+    public function getFiles()
+    {
+        return $this->files;
+    }
+    
 }

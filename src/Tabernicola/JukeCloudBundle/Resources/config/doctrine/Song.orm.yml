@@ -23,6 +23,9 @@ Tabernicola\JukeCloudBundle\Entity\Song:
             length: 255
             fixed: false
             comment: ''
+        number:
+            type: smallint
+            comment: ''
     manyToOne:
         disk:
             targetEntity: Disk
@@ -31,3 +34,5 @@ Tabernicola\JukeCloudBundle\Entity\Song:
             targetEntity: Artist
             inversedBy: songs
     lifecycleCallbacks: {  }
+    repositoryClass: Tabernicola\JukeCloudBundle\Entity\SongRepository
+  
