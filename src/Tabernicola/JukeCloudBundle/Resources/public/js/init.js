@@ -30,7 +30,7 @@ var thePlayer=$("#player").jPlayer({
         swfPath: "/extern/jplayer/jquery.jplayer/",
         supplied: "mp3"
     });
-    var thePlayerData = thePlayer.data('jPlayer');
+var thePlayerData = thePlayer.data('jPlayer');
 $(document).ready(function() {
     $(document).on('jc.playlist.new-element', function(e, data){
         if(Object.keys(thePlayerData.status.media).length==0){
@@ -42,7 +42,11 @@ $(document).ready(function() {
     $('#fileupload').fileupload({
         // Uncomment the following to send cross-domain cookies:
         //xhrFields: {withCredentials: true},
-        url: '/upload'
+        url: '/upload',
+        done: function (e, data) {
+            console.log(data);
+            data.context.html(data.result.files[0].response);
+        }
     });
 
     // Enable iframe cross-domain access via redirect option:

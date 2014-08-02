@@ -31,12 +31,19 @@ class HomeController extends Controller
         $em = $this->getDoctrine()->getManager();
         $artists = $em->getRepository('TabernicolaJukeCloudBundle:Artist')
                         ->findBy(array(), array('name' => 'ASC'));
+        $i=0;
+        $obj=new \stdClass();
+        $obj->opened=false;
         foreach ($artists as $artist) {
+            $i++;
             $node=new \stdClass();
             $node->id= 'artist-'.$artist->getId();
             $node->text= $artist->getName();
             $node->type='artist';
             $node->children = true;
+            if($i>10){
+                $node->state = $obj;
+            }
 
             $data[]=$node;
         }
@@ -51,6 +58,7 @@ class HomeController extends Controller
         $artist = $em->getRepository('TabernicolaJukeCloudBundle:Artist')->findOneById($id);
         $disks = $em->getRepository('TabernicolaJukeCloudBundle:Disk')
                         ->findBy(array('artist'=>$artist), array('title' => 'ASC'));
+        $data=array();
         foreach ($disks as $disk) {
             $node=new \stdClass();
             $node->id= 'disk-'.$disk->getId();

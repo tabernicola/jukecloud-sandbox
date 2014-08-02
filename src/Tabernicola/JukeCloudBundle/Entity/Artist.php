@@ -145,4 +145,8 @@ class Artist
         $node->children = array();
         return $node;
     }
+    
+    public function __toString() {
+        return "\nArtist: ".$this->getName();
+    }
 }

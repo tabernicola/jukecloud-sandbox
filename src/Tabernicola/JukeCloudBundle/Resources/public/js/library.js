@@ -39,7 +39,7 @@ $(document).ready(function() {
         "dnd":{
             "copy": false,
         },
-        "plugins": [ "search", "state", "types", "wholerow", "dnd"]
+        "plugins": [ "search", "types", "wholerow", "dnd"]
     }).on('changed.jstree', function(e, data) {
         //console.log(data);
         //console.log(e);

@@ -30,9 +30,14 @@ class Song
     private $artist;
 
     /**
-     * @var file
+     * @var files
      */
     private $files;
+    
+    /**
+     * @var file (false var)
+     */
+    private $file;
     
     /**
      * Set id
@@ -211,4 +216,37 @@ class Song
         return $this->files;
     }
     
+    /**
+     * Get files.
+     *
+     * @return UploadedFile
+     */
+    public function getFile()
+    {
+        if(is_array($this->files)){
+            foreach ($this->files as $file){
+                return $file;
+            }
+        }
+    }
+    
+    public function upload($uploadDir){
+        $files=$this->getFiles();
+        foreach ($files as $file){
+            $dest=$uploadDir.'/'.$this->getTitle().'.'.$file->guessExtension();
+            if (file_exists($dest)){
+                throw new \Exception("A song with the same name exist");
+            }
+            if(!$res=$file->move($uploadDir.'/',$this->getTitle().'.'.$file->guessExtension())){
+                throw new \Exception("Error saving the file");
+            }
+            $this->setPath($uploadDir.'/'.$this->getTitle().'.'.$res->getExtension());
+            return $this->getPath();
+        }
+        throw new \Exception("No file associated for the song");
+    }
+    
+    public function __toString() {
+        return "\nSong: ".$this->getTitle().$this->getArtist().$this->getDisk();
+    }
 }

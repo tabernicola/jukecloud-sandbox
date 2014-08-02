@@ -4,34 +4,60 @@ namespace Tabernicola\JukeCloudBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Tabernicola\JukeCloudBundle\Entity\Artist,
     Tabernicola\JukeCloudBundle\Entity\Disk,
     Tabernicola\JukeCloudBundle\Entity\Song;
 use Tabernicola\JukeCloudBundle\Form\SongType;
+use Symfony\Component\HttpFoundation\Request;
 
 class UploadController extends Controller
 {
-    public function indexAction()
+    public function indexAction(Request $request)
     {
-        $request = $this->get('request');
+        $uploadDir = $this->container->getParameter('tabernicola_juke_cloud.datadir');
         if ($request->getMethod() == 'POST') {
             $song=new Song();
+            $obj=new \stdClass();
             $em = $this->getDoctrine()->getManager();
-            $form = $this->createForm(new SongType, $song, array('em'=>$em))->add('submit','submit');
-            $form->bind($request);
-            if ($form->isValid()) {
-                $em = $this->getDoctrine()->getManager();
-                $em->persist($song);
-                $em->flush();
-                /*{"files":[{"url":"http://jquery-file-upload.appspot.com/blank.gif",
-                 *          "thumbnailUrl":"http://lh3.ggpht.com/C0FQdCPedquAF1S2o_hCf9WlMxEeTMs80",
-                 *          "name":"blank.gif",
-                 *          "type":"image/gif",
-                 *          "size":43,
-                 *          "deleteUrl":"http://jquery-file-upload.appspot.com/AMIBXU/blank.gif?delete=true",
-                 *          "deleteType":"DELETE"}]}*/
+
+            $form = $this->createForm(new SongType, $song, array('em'=>$em));
+            $form->handleRequest($request);
+            $validator = $this->container->get('validator');
+            $errorList = $validator->validate($song);
+            if (!count($errorList)) {
+                try{
+                    $uploadDir.=$song->getArtist()->getName();
+                    $uploadDir.='/'.$song->getDisk()->getTitle();
+                    $song->upload($uploadDir);
+                    $em = $this->getDoctrine()->getManager();
+                    if (!$song->getDisk()->getArtist()){
+                        $song->getDisk()->setArtist($song->getArtist());
+                    }
+                    $em->persist($song);
+                    $em->flush();
+                    $obj->url='song-'.$song->getId();
+                    $obj->name=$song->getTitle();
+                    $msg="Subida Realizada";
+                    $class="alert alert-success";
+                    /*{"files":[{"url":"http://jquery-file-upload.appspot.com/blank.gif",
+                    *          "thumbnailUrl":"http://lh3.ggpht.com/C0FQdCPedquAF1S2o_hCf9WlMxEeTMs80",
+                    *          "name":"blank.gif",
+                    *          "type":"image/gif",
+                    *          "size":43,
+                    *          "deleteUrl":"http://jquery-file-upload.appspot.com/AMIBXU/blank.gif?delete=true",
+                    *          "deleteType":"DELETE"}]}*/
+                }
+                catch(\Exception $e){
+                  $obj->error=true;
+                  $class="alert alert-danger";
+                  $msg=$e->getMessage();
+                }
             }
             else{
+                foreach ($errorList as $err) {
+                    $msg.= $err->getMessage() . "\n";
+                }
                 /*{"files":[{"url":"http://jquery-file-upload.appspot.com/2B1_-zT--rAihVs/renta.jpg",
                  *          "name":"renta.jpg",
                  *          "type":"image/jpeg",
@@ -39,26 +65,24 @@ class UploadController extends Controller
                  * "error":"API error 1 (images: UNSPECIFIED_ERROR)",
                  * "deleteUrl":"http://jquery-file-upload.appspot.com/AMIfv956I/renta.jpg?delete=true",
                  * "deleteType":"DELETE"}]}*/
-                $errors = $form->get('title')->getErrors(); // return array of errors
-                foreach ($errors as $error){
-                    echo "\n<br>".$error->getMessage();
-                }
-                $errors = $form->get('disk')->getErrors(); // return array of errors
-                foreach ($errors as $error){
-                    echo "\n<br>".$error->getMessage();
-                }
-                $errors = $form->get('artist')->getErrors(); // return array of errors
-                foreach ($errors as $error){
-                    echo "\n<br>".$error->getMessage();
-                }
-                $errors = $form->getErrors(); // return array of errors
-                foreach ($errors as $error){
-                    echo "\n<br>".$error->getMessage();
-                }
-                
+                $obj->error=true;
+                $class="alert alert-danger";
+                $msg=$msg;
             }
         }
-        return new Response();
+        $id="rmLink-".rand(1, 10000);
+        $closeBtn='<div><a id="'.$id.'" href="javascript:removeParentTr(\''.$id.'\')"><i class="right glyphicon glyphicon-remove"></i></a></div>';
+        $link='';
+        if (isset($obj->url)){
+            $link='<div><a href="javascript:thePlaylist.addElement(\''.$obj->url.'\', $(thePlaylist.selector))">Añadir a la lista actual</a></div>';
+        }
+        $obj->response='<td colspan=9><div class="'.$class.' large100">'.$closeBtn.'<div>'.$msg.'</div>'.$link.'</div></td>';
+        
+        $data=new \stdClass();
+        $data->files=array();
+        $data->files[]=$obj;
+        $response = new JsonResponse();
+        return $response->setData($data);
     }
     
     public function artistsAction()

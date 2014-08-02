@@ -147,4 +147,8 @@ class Disk
         $node->children = array();
         return $node;
     }
+    
+    public function __toString() {
+        return "\nDisk: ".$this->getTitle();
+    }
 }

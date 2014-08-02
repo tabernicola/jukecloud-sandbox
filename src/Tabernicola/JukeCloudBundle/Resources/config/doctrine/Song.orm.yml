@@ -30,9 +30,11 @@ Tabernicola\JukeCloudBundle\Entity\Song:
         disk:
             targetEntity: Disk
             inversedBy: songs
+            cascade: ["persist"]
         artist:
             targetEntity: Artist
             inversedBy: songs
+            cascade: ["persist"]
     lifecycleCallbacks: {  }
     repositoryClass: Tabernicola\JukeCloudBundle\Entity\SongRepository
   
