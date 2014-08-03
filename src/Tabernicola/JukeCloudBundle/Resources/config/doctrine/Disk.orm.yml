@@ -17,6 +17,15 @@ Tabernicola\JukeCloudBundle\Entity\Disk:
             length: 255
             fixed: false
             comment: ''
+        slug:
+            type: string
+            length: 255
+            gedmo:
+                slug:
+                    separator: "-"
+                    fields:
+                        - title
+                    unique: false
     manyToOne:
         artist:
             targetEntity: Artist
@@ -26,3 +35,4 @@ Tabernicola\JukeCloudBundle\Entity\Disk:
             targetEntity: Song
             mappedBy: disk
     lifecycleCallbacks: {  }
+    repositoryClass: Tabernicola\JukeCloudBundle\Entity\DiskRepository

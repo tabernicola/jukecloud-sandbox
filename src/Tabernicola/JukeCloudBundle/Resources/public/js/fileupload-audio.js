@@ -64,9 +64,9 @@
                     ID3v2.parseFile(file,function(tags){
                         var id=file.name.replace(/ /g,'-').replace(/[^\w-]+/g,'');
                         console.log(tags);
-                        $('#form-band-'+id).val(tags.Band);
-                        $('#form-disk-'+id).val(tags.Album);
-                        $('#form-song-'+id).val(tags.Title);
+                        $('#form-band-'+id).val(tags.Band).autocomplete({source: "/list/artists/"});
+                        $('#form-disk-'+id).val(tags.Album).autocomplete({source: "/list/disks/"});
+                        $('#form-song-'+id).val(tags.Title).autocomplete({source: "/list/songs/"});
                         $('#form-number-'+id).val(tags["Track number"]);
                     })
                 }

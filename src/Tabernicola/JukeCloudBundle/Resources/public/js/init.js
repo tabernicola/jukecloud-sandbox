@@ -44,21 +44,15 @@ $(document).ready(function() {
         //xhrFields: {withCredentials: true},
         url: '/upload',
         done: function (e, data) {
-            console.log(data);
             data.context.html(data.result.files[0].response);
         }
     });
 
     // Enable iframe cross-domain access via redirect option:
     $('#fileupload').fileupload(
-        'option',
-        'redirect',
-        window.location.href.replace(
-            /\/[^\/]*$/,
-            '/cors/result.html?%s'
-        )
+        'option','redirect',
+        window.location.href.replace(/\/[^\/]*$/,'/cors/result.html?%s')
     );
-
 
     // Load existing files:
     $('#fileupload').addClass('fileupload-processing');
@@ -76,15 +70,15 @@ $(document).ready(function() {
     });
 
     $('#fileupload').bind('fileuploadsubmit', function (e, data) {
-    var inputs = data.context.find(':input');
-    if (inputs.filter(function () {
-            return !this.value && $(this).prop('required');
-        }).first().focus().length) {
-        data.context.find('button').prop('disabled', false);
-        return false;
-    }
-    data.formData = inputs.serializeArray();
-});
+        var inputs = data.context.find(':input');
+        if (inputs.filter(function () {
+                return !this.value && $(this).prop('required');
+            }).first().focus().length) {
+            data.context.find('button').prop('disabled', false);
+            return false;
+        }
+        data.formData = inputs.serializeArray();
+    });
 });
 
 $('#upload-menu a').click(function (e) {

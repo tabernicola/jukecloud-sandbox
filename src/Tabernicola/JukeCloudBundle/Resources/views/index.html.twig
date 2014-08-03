@@ -8,6 +8,7 @@
                 {% endblock %}
 
                 {% block styles %}
+                    <link rel="stylesheet" href="{{ asset(components_folder ~ 'jquery-ui/themes/smoothness/jquery-ui.css')}}"/>
                     <link rel="stylesheet" href="{{ asset(components_folder ~ 'bootstrap/css/bootstrap.min.css')}}"/>
                     <link rel="stylesheet" href="{{ asset(components_folder ~ 'font-awesome/css/font-awesome.min.css')}}"/>
                     <link rel="stylesheet" href="{{ asset(components_folder ~ 'jqueryui-theme-bootstrap/jquery-ui-1.10.3.theme.css')}}"/>
@@ -68,7 +69,7 @@
                         <script src="{{ asset(components_folder ~ 'jquery-ui/ui/jquery.ui.slider.js') }}"></script>
                         <script src="{{ asset('bundles/tabernicolajukecloud/js/id3v2.js') }}"></script>
                         <script src="{{ asset(components_folder ~ 'jplayer/jquery.jplayer/jquery.jplayer.js') }}"></script>
-                        <script src="jstree/jstree.min.js"></script>
+                        <script src="jstree/jstree.js"></script>
                         <!-- The Templates plugin is included to render the upload/download listings -->
                         <script src="{{ asset('bundles/tabernicolajukecloud/js/template.js')}}"></script>
                         <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
@@ -136,7 +137,7 @@
                                                             </div>
                                                         </div>
                                                         <!-- The table listing the files available for upload/download -->
-                                                        <div id="upload-table-content">
+                                                        <div id="upload-table-content ui-widget">
                                                             <table role="presentation" class="table table-striped"><tbody class="files">
                                                                     <tr class="template-upload">
                                                                         <td></td>

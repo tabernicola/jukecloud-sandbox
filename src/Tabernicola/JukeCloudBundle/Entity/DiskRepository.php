@@ -12,4 +12,13 @@ use Doctrine\ORM\EntityRepository;
  */
 class DiskRepository extends EntityRepository
 {
+    public function search($q){
+        $qb = $this->createQueryBuilder('d');
+
+        $qb->select('d')
+            ->where('d.title LIKE :q')
+            ->addorderBy('d.title','ASC')
+            ->setParameter('q', "%$q%");
+        return $qb->getQuery()->getResult();
+    }
 }

@@ -45,11 +45,27 @@ tabernicola_juke_cloud_playlist_song:
     defaults: { _controller: TabernicolaJukeCloudBundle:Playlist:song }
     requirements:
         id: \d+
-        
+
+tabernicola_juke_cloud_library_no_filter:
+    pattern:  /library/filter/
+    defaults: { _controller: TabernicolaJukeCloudBundle:Home:filter }
+
 tabernicola_juke_cloud_library_filter:
     pattern:  /library/filter/{search}
     defaults: { _controller: TabernicolaJukeCloudBundle:Home:filter }
-    
+
 tabernicola_juke_cloud_upload:
     pattern:  /upload
     defaults: { _controller: TabernicolaJukeCloudBundle:Upload:index}
+    
+tabernicola_juke_cloud_list_artist:
+    pattern:  /list/artists/
+    defaults: { _controller: TabernicolaJukeCloudBundle:List:artists }
+        
+tabernicola_juke_cloud_list_disk:
+    pattern:  /list/disks/
+    defaults: { _controller: TabernicolaJukeCloudBundle:List:disks}
+        
+tabernicola_juke_cloud_list_song:
+    pattern:  /list/songs/
+    defaults: { _controller: TabernicolaJukeCloudBundle:List:songs }

@@ -1,26 +1,27 @@
 var thePlaylist= new Playlist('#playlist');
+var defaultData={
+    'url': function(node) {
+        switch (node.type) {
+            case 'root':
+                return '/ajax/' + node.id +'/' ;
+            case 'artist':
+                return '/ajax/' + node.id +'/';
+            case 'disk':
+                return '/ajax/' + node.id +'/';
+            default:
+                return '/ajax/types/'
+        }
+    },
+    "data": function(node) {
+        return null
+    }
+}
 $(document).ready(function() {
     $('#library').jstree({
         "core": {
             "check_callback": true,
             "themes": {"stripes": true},
-            "data": {
-                'url': function(node) {
-                    switch (node.type) {
-                        case 'root':
-                            return '/ajax/' + node.id ;
-                        case 'artist':
-                            return '/ajax/' + node.id ;
-                        case 'disk':
-                            return '/ajax/' + node.id ;
-                        default:
-                            return '/ajax/types/'
-                    }
-                },
-                "data": function(node) {
-                    return null
-                }
-            }
+            "data": defaultData
         },
         "types": {
             "root": {
@@ -39,25 +40,28 @@ $(document).ready(function() {
         "dnd":{
             "copy": false,
         },
-        "plugins": [ "search", "types", "wholerow", "dnd"]
+        "plugins": [ "types", "wholerow", "dnd"]
     }).on('changed.jstree', function(e, data) {
         //console.log(data);
         //console.log(e);
     });
     
     function filterLibrary(search){
-        $.ajax({
-            url: '/library/filter/'+encodeURIComponent(search),
-            dataType: "json"
-        }).done(function(data){
-            console.log('filter');
-            $('#library').jstree(true).settings.core.data =data;
-            $("#library").jstree(true).refresh();
-        });
+            $.ajax({
+                url: '/library/filter/'+encodeURIComponent(search),
+                dataType: "json"
+            }).done(function(data){
+                $('#library').jstree(true).settings.core.data =data;
+                $("#library").jstree(true).refresh();
+            });
+        
+        
     }
     $('#clear-library-filter').click(function(){
         $('#library-filter').val('');
-        filterLibrary('');
+        $("#library").jstree("close_all");
+        $('#library').jstree(true).settings.core.data =defaultData;
+        $("#library").jstree(true).refresh();
     });
     
     var to = false;

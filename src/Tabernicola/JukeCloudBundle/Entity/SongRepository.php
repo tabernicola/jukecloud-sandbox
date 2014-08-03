@@ -16,14 +16,8 @@ class SongRepository extends EntityRepository
         $qb = $this->createQueryBuilder('s');
 
         $qb->select('s')
-            ->innerJoin('s.disk', 'd')
-            ->innerJoin('s.artist', 'a')
             ->where('s.title LIKE :q')
-            ->orWhere('d.title LIKE :q')
-            ->orWhere('a.name LIKE :q')
-            ->orderBy('a.name','ASC')
-            ->addorderBy('d.title','ASC')
-            ->addorderBy('s.id','ASC')
+            ->addorderBy('s.number','ASC')
             ->setParameter('q', "%$q%");
         return $qb->getQuery()->getResult();
     }

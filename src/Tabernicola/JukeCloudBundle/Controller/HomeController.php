@@ -21,6 +21,9 @@ class HomeController extends Controller
         $node->text= 'All the music';
         $node->type='root';
         $node->children = true;
+        $obj=new \stdClass();
+        $obj->opened=true;
+        $node->state = $obj;
         $response = new JsonResponse();
         return $response->setData(array($node));
 
@@ -41,9 +44,7 @@ class HomeController extends Controller
             $node->text= $artist->getName();
             $node->type='artist';
             $node->children = true;
-            if($i>10){
-                $node->state = $obj;
-            }
+            $node->state = $obj;
 
             $data[]=$node;
         }
@@ -93,37 +94,78 @@ class HomeController extends Controller
         return $response->setData($data);
     }
     
-    public function filterAction($search)
+    public function filterAction($search=null)
     {
+        if (!$search){
+            return $this->typesAction();
+        }
+        
         $em = $this->getDoctrine()->getManager();
 
-        $songs = $em->getRepository('TabernicolaJukeCloudBundle:Song')->search($search);
-        $data=array();
+        //states
+        $openState=new \stdClass();
+        $closeState=new \stdClass();
+        $closeState->opened=false;        
+        $openState->opened=true;
+        
+        //root node
         $root=new \stdClass();
         $root->id= 'artists';
         $root->text= 'All the music';
         $root->type='root';
-        $root->children=array();
-        $lastArtist=$lastDisk=0;
-        $artistIndex=-1;
-        $state=new \stdClass();
-        $state->opened=true;
-        foreach ($songs as $song) {
-            if ($lastArtist!=$song->getArtist()->getId()){
-                $lastArtist=$song->getArtist()->getId();
-                $artistIndex++;
-                $diskIndex=-1;
-                $root->children[]=$song->getArtist()->toObject();
-                $root->children[$artistIndex]->state=$state;
-            }
-            if ($lastDisk!=$song->getDisk()->getId()){
-                $lastDisk=$song->getDisk()->getId();
-                $diskIndex++;
-                $root->children[$artistIndex]->children[]=$song->getDisk()->toObject();
-                $root->children[$artistIndex]->children[$diskIndex]->state=$state;
-            }
-            $root->children[$artistIndex]->children[$diskIndex]->children[]=$song->toObject();
+        $childrens=array();
+        
+        //artists
+        $artists = $em->getRepository('TabernicolaJukeCloudBundle:Artist')->search($search);
+        foreach ($artists as $artist) {
+            $childrens[$artist->getId()]=$artist->toObject();
+            $childrens[$artist->getId()]->state=$closeState;
         }
+        
+        //disks
+        $disks = $em->getRepository('TabernicolaJukeCloudBundle:Disk')->search($search);
+        foreach ($disks as $disk){
+            $artist=$disk->getArtist();
+            if (!isset($childrens[$artist->getId()])){
+                $childrens[$artist->getId()]=$artist->toObject();
+                $childrens[$artist->getId()]->state=$openState;
+            }
+            $childrens[$artist->getId()]->children[$disk->getId()]=$disk->toObject();
+            $childrens[$artist->getId()]->children[$disk->getId()]->state=$closeState;
+        }
+        
+        //songs
+        $songs = $em->getRepository('TabernicolaJukeCloudBundle:Song')->search($search);
+        foreach ($songs as $song) {
+            $artist=$song->getArtist();
+            $disk=$song->getDisk();
+            if (!isset($childrens[$artist->getId()])){
+                $childrens[$artist->getId()]=$artist->toObject();
+                $childrens[$artist->getId()]->state=$openState;
+            }
+            if (!isset($childrens[$artist->getId()]->children[$disk->getId()])){
+                $childrens[$artist->getId()]->children[$disk->getId()]=$disk->toObject();
+                $childrens[$artist->getId()]->children[$disk->getId()]->state=$openState;
+            }
+            $childrens[$artist->getId()]->children[$disk->getId()]->children[]=$song->toObject();
+        }
+        
+        //convert hash array to index array
+        $childrens=  array_values($childrens);
+        $childrensCount=  count($childrens);
+        for ($i= 0; $i < $childrensCount; $i++) {
+            if (count($childrens[$i]->children)){
+                $childrens[$i]->children=  array_values($childrens[$i]->children);
+                $achildrensCount=  count($childrens[$i]->children);
+                for ($j= 0; $j < $achildrensCount; $j++) {
+                    if (count($childrens[$i]->children[$j]->children)){
+                        $childrens[$i]->children[$j]->children=  array_values($childrens[$i]->children[$j]->children);
+                    }
+                }
+            }
+        }
+        $root->children=$childrens;
+
         $response = new JsonResponse();
         return $response->setData(array($root));
     }

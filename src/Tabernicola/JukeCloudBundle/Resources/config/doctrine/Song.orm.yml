@@ -26,6 +26,15 @@ Tabernicola\JukeCloudBundle\Entity\Song:
         number:
             type: smallint
             comment: ''
+        slug:
+            type: string
+            length: 255
+            gedmo:
+                slug:
+                    separator: "-"
+                    fields:
+                        - title
+                    unique: false
     manyToOne:
         disk:
             targetEntity: Disk

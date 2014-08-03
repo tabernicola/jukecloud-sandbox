@@ -68,9 +68,11 @@ body {
 .inner-addon {position: relative;}
 .inner-addon a{color: black;}
 .inner-addon a:hover{text-decoration: none;}
-.inner-addon input {padding-left: 30px;padding-right: 30px;}
-.inner-addon .right {position: absolute;right: 0px;padding: 10px 12px;}
+.inner-addon input {padding-left: 30px;padding-right: 30px;width:88%}
+.inner-addon .right {position: absolute;right: 48px;padding-top: 10px;padding-left:12px;}
 .inner-addon .left {position: absolute;padding: 10px 12px;}
+.modal-dialog{width:90%}
+#add-song{position: absolute; top:0px; right:-2px}
 
 #player{
     background: url('/bundles/tabernicolajukecloud/img/background.png') no-repeat 0px 0px   ;
@@ -86,7 +88,6 @@ body {
 .template-upload td{padding: 2px!important}
 .template-upload div{padding: 2px!important; float:left;margin-bottom: 0px}
 .template-upload .btn{font-size: 12px;padding: 2px 12px}
-#add-song-div .modal-dialog{width:90%}
 #upload-table-content {max-height: 420px;overflow-y: auto;}
 .fileupload-buttonbar{
     margin:0px;
@@ -96,3 +97,5 @@ body {
 .alert-danger a{color: #a94442}
 .alert-success a{color: #3c763d}
 .large100 {width:100%}
+
+.ui-autocomplete {z-index: 1100;}
