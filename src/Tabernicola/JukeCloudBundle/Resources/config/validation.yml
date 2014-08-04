@@ -1,4 +1,8 @@
 Tabernicola\JukeCloudBundle\Entity\Song:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: 
+            fields: [title, artist, disk]
+            message: 'Esta canción ya existe en la libreria'
     properties:
         file:
             - File:

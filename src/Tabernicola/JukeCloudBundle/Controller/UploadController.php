@@ -55,16 +55,10 @@ class UploadController extends Controller
                 }
             }
             else{
+                $msg="";
                 foreach ($errorList as $err) {
                     $msg.= $err->getMessage() . "\n";
                 }
-                /*{"files":[{"url":"http://jquery-file-upload.appspot.com/2B1_-zT--rAihVs/renta.jpg",
-                 *          "name":"renta.jpg",
-                 *          "type":"image/jpeg",
-                 * "size":657156,
-                 * "error":"API error 1 (images: UNSPECIFIED_ERROR)",
-                 * "deleteUrl":"http://jquery-file-upload.appspot.com/AMIfv956I/renta.jpg?delete=true",
-                 * "deleteType":"DELETE"}]}*/
                 $obj->error=true;
                 $class="alert alert-danger";
                 $msg=$msg;
