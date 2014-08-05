@@ -2,6 +2,9 @@ var Playlist= function(selector){
     this.selector=selector
     this.nextId=0;
     this.tempId=0;
+    this.shuffle=false;
+    this.numElements=0;
+    
     $(this.selector).sortable();
     console.log($(this.selector).selectable().data());
     this.activeElement;
@@ -36,6 +39,19 @@ var Playlist= function(selector){
             playlist.playSong(t.attr('id'));
         };
     });
+    
+    $('#active-shuffle').bind("click",function( event ) {
+        playlist.shuffle=true;
+        $('#active-shuffle').hide();
+        $('#disable-shuffle').show();
+        playlist.refreshPlaylist();
+    })
+    
+    $('#disable-shuffle').bind("click",function( event ) {
+        playlist.shuffle=false;  
+        $('#disable-shuffle').hide();
+        $('#active-shuffle').show();
+    })
 }
 
 $.extend(Playlist.prototype,{
@@ -55,7 +71,7 @@ $.extend(Playlist.prototype,{
         else {
             element=$(elemHtml).appendTo($(this.selector));
         }
-        
+        this.numElements++;
 
         element.playlist=this;
         element.updateElementInfo = function(data){
@@ -85,11 +101,13 @@ $.extend(Playlist.prototype,{
         </div>';
         
         $(elemHtml).insertAfter('#'+where);
+        this.numElements++;
         $('#'+newId).trigger('jc.playlist.new-element');
     },
     
     removeSong: function(id){
         $('#'+id).remove();
+        this.numElements--;
         $(this.selector).selectable( "refresh" );
     },
     
@@ -121,6 +139,29 @@ $.extend(Playlist.prototype,{
         else{
             this.playSong($('#'+current).next().attr('id'));
         }
-    }
+        this.refreshPlaylist();
+    },
+    
+    getActivePosition: function(){
+        try{
+            return $('#'+this.activeElement).index();
+        }
+        catch(e){
+            return 0;
+        }
+    },
+    //Add element to the playlist
+    refreshPlaylist: function(){
+        if (this.shuffle){
+            var pos=this.getActivePosition();
+            var numSongsToAdd=10-(this.numElements-pos);
+            for(var i=numSongsToAdd;i>0;i--){
+                this.addElement('random?'+Math.random(),$(this.selector));
+            }
+            for(var i=0;i<pos-5;i++){
+                this.removeSong($(this.selector+ ' div:first').attr('id'));
+            }
+        }
+    },
 });
     

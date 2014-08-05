@@ -37,7 +37,7 @@ body {
 .volume-background{position: absolute;top: 20px;left: 15px;}
 
 
-.panel-body{padding:0px;overflow-x: auto;overflow-y: auto;height:85%;}
+.panel-body{padding:0px;overflow-x: auto;overflow-y: auto;height:89%;}
 .list-group {margin-bottom: 0px}
 .player-button button{
     font-size: 28px;
@@ -99,3 +99,8 @@ body {
 .large100 {width:100%}
 
 .ui-autocomplete {z-index: 1100;}
+
+#disable-shuffle{display:none}
+#active-shuffle,#disable-shuffle{
+    color: black
+}

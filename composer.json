@@ -27,7 +27,9 @@
         "doctrine/doctrine-fixtures-bundle": "2.2.*",
         "blueimp/jquery-file-upload": "dev-master",
         "stof/doctrine-extensions-bundle": "1.1.*@dev",
-        "nass600/get-id3": "dev-master"
+        "nass600/get-id3": "dev-master",
+        "nass600/Lyrics-bundle": "dev-master",
+        "ricbra/discogs-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

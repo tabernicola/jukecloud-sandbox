@@ -20,7 +20,12 @@ class ContentController extends Controller
         }   
 
         $response=new BinaryFileResponse($song->getPath());
-        $response->headers->set('Content-Type', mime_content_type($song->getPath()));
+        $mime=mime_content_type($song->getPath());
+        //if mimetype is data, change to audio
+        if ($mime=='application/octet-stream'){
+            $mime='audio/mpeg';
+        }
+        $response->headers->set('Content-Type', $mime);
         return $response;
     }
     

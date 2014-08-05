@@ -21,4 +21,30 @@ class SongRepository extends EntityRepository
             ->setParameter('q', "%$q%");
         return $qb->getQuery()->getResult();
     }
+    
+    public function getMaxId(){
+        $qb = $this->createQueryBuilder('s');
+
+        $qb->select('MAX(s.id)');
+        return $qb->getQuery()->getSingleScalarResult();
+    }
+    
+    public function getMinId(){
+        $qb = $this->createQueryBuilder('s');
+
+        $qb->select('MIN(s.id)');
+        return $qb->getQuery()->getSingleScalarResult();
+    }
+    
+    public function findClosestById($val){
+        $qb = $this->createQueryBuilder('s');
+
+        $qb->select('s')
+            ->where('s.id >= :q')
+            ->addorderBy('s.id','ASC')
+            ->setParameter('q', $val)
+            ->setMaxResults(1);
+        return $qb->getQuery()->getSingleResult();
+    }
+            
 }

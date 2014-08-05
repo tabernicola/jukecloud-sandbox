@@ -46,6 +46,10 @@ tabernicola_juke_cloud_playlist_song:
     requirements:
         id: \d+
 
+tabernicola_juke_cloud_playlist_random_song:
+    pattern:  /playlist/random
+    defaults: { _controller: TabernicolaJukeCloudBundle:Playlist:randomSong }
+
 tabernicola_juke_cloud_library_no_filter:
     pattern:  /library/filter/
     defaults: { _controller: TabernicolaJukeCloudBundle:Home:filter }

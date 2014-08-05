@@ -33,6 +33,17 @@ class PlaylistController extends Controller
         return $this->songsToResponse($songs);
     }
     
+    public function randomSongAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $repo = $em->getRepository('TabernicolaJukeCloudBundle:Song');
+        $max=$repo->getMaxId();
+        $min=$repo->getMinId();
+        $val=rand($min, $max);
+        $song=$repo->findClosestById($val);
+        return $this->songsToResponse(array($song));
+    }
+    
     private function songsToResponse($songs){
         $data=array();
         foreach ($songs as $song) {

@@ -2,6 +2,9 @@ var thePlayer=$("#player").jPlayer({
         ended: function() {
             thePlaylist.playNext();
         },
+        error: function () {
+            thePlaylist.playNext();
+        },
         cssSelectorAncestor: "#controls",
         cssSelector: {
             videoPlay: ".video-play",
