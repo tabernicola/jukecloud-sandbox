@@ -26,6 +26,16 @@ Tabernicola\JukeCloudBundle\Entity\Disk:
                     fields:
                         - title
                     unique: false
+        created:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updated:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: update
     manyToOne:
         artist:
             targetEntity: Artist

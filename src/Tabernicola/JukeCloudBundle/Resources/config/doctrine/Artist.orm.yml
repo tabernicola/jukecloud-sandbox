@@ -25,6 +25,16 @@ Tabernicola\JukeCloudBundle\Entity\Artist:
                     separator: "-"
                     fields:
                         - name
+        created:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updated:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: update
     oneToMany:
         disks:
             targetEntity: Disk
