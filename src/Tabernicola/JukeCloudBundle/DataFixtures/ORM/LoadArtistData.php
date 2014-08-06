@@ -161,7 +161,7 @@ class LoadArtistData implements FixtureInterface, ContainerAwareInterface
             
             $elem=new Song();
             $elem->setTitle($info['title'][0]);
-            $elem->setNumber($info['track_number'][0]);
+            $elem->setNumber(intval($info['track_number'][0]));
             $elem->setArtist($artist);
             $elem->setDisk($disk);
             $elem->setPath($root);
