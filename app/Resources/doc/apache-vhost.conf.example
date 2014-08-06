@@ -1,0 +1,33 @@
+<VirtualHost *:80>
+    ServerName jukecloud.com
+    ServerAlias www.jukecloud.com
+
+    DirectoryIndex app.php
+
+    DocumentRoot /var/www/jukecloud/web
+    <Directory /var/www/jukecloud/web>
+        # enable the .htaccess rewrites
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Require all granted
+        RewriteEngine On
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteRule ^(.*)$ app.php [QSA,L]
+    </Directory>
+
+    ErrorLog /var/log/apache2/jukecloud-error.log
+    CustomLog /var/log/apache2/jukecloud-access.log combined
+
+#    AddOutputFilterByType DEFLATE text/css text/plain text/html application/xhtml+xml text/xml application/xml
+
+    <IfModule mod_headers.c>
+        Header append Vary User-Agent env=!dont-vary
+
+        ExpiresActive On
+        ExpiresDefault "now plus 1 week"
+        ExpiresByType image/x-icon "now plus 1 month"
+        ExpiresByType image/gif    "now plus 1 month"
+        ExpiresByType image/png    "now plus 1 month"
+        ExpiresByType image/jpeg   "now plus 1 month"
+    </IfModule>
+</VirtualHost>
