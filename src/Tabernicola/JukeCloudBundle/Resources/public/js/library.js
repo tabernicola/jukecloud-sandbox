@@ -34,7 +34,7 @@ $(document).ready(function() {
                 "icon": "glyphicon glyphicon-headphones",
             },
             "disk": {
-                "icon": "glyphicon glyphicon-sound-stereo",
+                "icon": "/bundles/tabernicolajukecloud/img/disc-case.png",
             }
         },
         "dnd":{
