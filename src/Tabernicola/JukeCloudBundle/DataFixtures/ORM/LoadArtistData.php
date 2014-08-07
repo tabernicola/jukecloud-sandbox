@@ -96,16 +96,8 @@ class LoadArtistData implements FixtureInterface, ContainerAwareInterface
                         elseif(isset($info['tags']['asf'])){
                             //NOT YET SUPPORTED
                         }
-                        
                         else{    
-                            echo "\n$root$file";
-                            if (isset($info['tags'])){
-                                print_r($info['tags']);
-                            }
-                            else{
-                                print_r($info);
-                            }
-                            exit;
+                            echo "\n$root$file not suported";
                         }
                     }
                 }
@@ -167,8 +159,7 @@ class LoadArtistData implements FixtureInterface, ContainerAwareInterface
             $elem->setPath($root);
             $disk->addSong($elem);
             $manager->persist($elem);
-            echo "\n".$info['artist'][0].' - '.$info['album'][0].' - '.$info['track_number'][0].' - '.$info['title'][0].' - ';
-            echo  "\n".$root;
+            echo  ".";
             $manager->flush();
             try{
                 $manager->getConnection()->commit();
