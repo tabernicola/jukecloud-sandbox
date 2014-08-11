@@ -108,17 +108,13 @@ class LoadArtistData implements FixtureInterface, ContainerAwareInterface
     }
     
     private function saveInfo(ObjectManager $manager,$path,$file,$info,$possibleArtistName,$possibleDiskName){
-        /*[artist][0] => Acido C
-        [album][0] => La ostra azul
-        [title][0] => / Shaft
-        [track_number][0] => 1*/
         if ( !isset($info['track_number'][0]) ){
             list($val)=explode('.',$file,2);
             $val=preg_replace('/[a-zA-Z\s]/','',$val);
             $info['track_number'][0] = $val;
         }
         if (!isset($info['album'][0]) ){
-            echo "Can't save $path/$file, no disk info";
+            echo "\nCan't save $path/$file, no disk info";
             return;
         } 
         
@@ -127,7 +123,7 @@ class LoadArtistData implements FixtureInterface, ContainerAwareInterface
         } 
         
         if (!isset($info['artist'][0])){
-            echo "Can't save $path/$file, no artist info";
+            echo "\nCan't save $path/$file, no artist info";
             return;
         } 
     

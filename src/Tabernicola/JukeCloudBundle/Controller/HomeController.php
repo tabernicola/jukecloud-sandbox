@@ -54,6 +54,7 @@ class HomeController extends Controller
     
     public function artistDisksAction($id)
     {
+        $cacheManager = $this->container->get('liip_imagine.cache.manager');
         $em = $this->getDoctrine()->getManager();
 
         $artist = $em->getRepository('TabernicolaJukeCloudBundle:Artist')->findOneById($id);
@@ -66,6 +67,11 @@ class HomeController extends Controller
             $node->text= $disk->getTitle();
             $node->type='disk';
             $node->children = true;
+            if ($disk->getCover()){
+                // string to put directly in the "src" of the tag <img>
+                $srcPath = $cacheManager->getBrowserPath($disk->getCover(), 'navcover');
+                $node->icon=$srcPath;
+            }
 
             $data[]=$node;
         }

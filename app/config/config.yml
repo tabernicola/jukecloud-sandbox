@@ -72,3 +72,28 @@ stof_doctrine_extensions:
         default:
             sluggable: true
             timestampable: true
+            
+ricbra_discogs:
+    user_agent: "TabernicolaJukecloudBundle/0.1 +http://tabernicola.es"
+
+liip_imagine:
+        filter_sets:
+            navcover:
+                filters:
+                    thumbnail: { size: [16, 16], mode: inset }
+            plcover:
+                filters:
+                    thumbnail: { size: [32, 32], mode: inset }
+            infocover:
+                filters:
+                    thumbnail: { size: [90, 90], mode: inset }
+        loaders:
+            default:
+                filesystem:
+                    data_root: %tabernicola_juke_cloud.datadir%
+        resolvers:
+            default:
+                web_path:
+                    web_root: %kernel.root_dir%/../web
+                    cache_prefix: thumbs
+        cache: default

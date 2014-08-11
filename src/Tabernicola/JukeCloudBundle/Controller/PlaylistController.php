@@ -46,11 +46,22 @@ class PlaylistController extends Controller
     
     private function songsToResponse($songs){
         $data=array();
+        $cacheManager = $this->container->get('liip_imagine.cache.manager');
+        
         foreach ($songs as $song) {
             $node=new \stdClass();
             $node->id= 'song-'.$song->getId();
             $node->songTitle= $song->getTitle();
             $node->diskTitle= $song->getDisk()->getTitle();
+            if ($song->getDisk()->getCover()){
+                // string to put directly in the "src" of the tag <img>
+                $srcPath = $cacheManager->getBrowserPath($song->getDisk()->getCover(), 'plcover');
+                $node->icon=$srcPath;
+            }
+            else{
+                $node->icon=$this->container->get('templating.helper.assets')
+                            ->getUrl('bundles/tabernicolajukecloud/img/album.png');
+            }
             $node->artistName= $song->getArtist()->getName();
             $data[]=$node;
         }

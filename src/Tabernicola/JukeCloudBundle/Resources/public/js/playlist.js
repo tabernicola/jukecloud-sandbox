@@ -95,7 +95,7 @@ $.extend(Playlist.prototype,{
         var elemHtml=
         '<div id="'+newId+'" class="list-group droppable-element" data-element="'+data.id+'">\n\
             <a href="#" class="list-group-item">\n\
-                <div class="album-cover"><img src="/bundles/tabernicolajukecloud/img/album.png"/></div>\n\
+                <div class="album-cover"><img src="'+data.icon+'"/></div>\n\
                 <p class="list-group-item-text ">'+data.songTitle+'</p>\n\
                 <p class="list-group-item-text ">'+data.diskTitle+'('+data.artistName+')</p>\n\
             </a>\n\

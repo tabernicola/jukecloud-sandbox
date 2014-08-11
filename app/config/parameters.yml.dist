@@ -14,4 +14,7 @@ parameters:
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
 
-    components-folder: components/
+    components-folder: extern/
+
+    discogs_consumer_key: ""
+    discogs_consumer_secret: ""

@@ -47,7 +47,9 @@ $(document).ready(function() {
         //xhrFields: {withCredentials: true},
         url: '/upload',
         done: function (e, data) {
-            data.context.html(data.result.files[0].response);
+            if (data.context){
+                data.context.html(data.result.files[0].response);
+            }
         }
     });
 

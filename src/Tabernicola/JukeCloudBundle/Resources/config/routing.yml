@@ -73,3 +73,13 @@ tabernicola_juke_cloud_list_disk:
 tabernicola_juke_cloud_list_song:
     pattern:  /list/songs/
     defaults: { _controller: TabernicolaJukeCloudBundle:List:songs }
+
+
+tabernicola_juke_cloud_info_song:
+    pattern:  /info/song-{id}
+    defaults: { _controller: TabernicolaJukeCloudBundle:Info:song }
+    requirements:
+        id: \d+
+        
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"

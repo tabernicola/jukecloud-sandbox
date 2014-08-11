@@ -1,7 +1,6 @@
 parameters:
     tabernicola_juke_cloud.datadir: /datos/Music/
-#    tabernicola_juke_cloud.example.class: Tabernicola\JukeCloudBundle\Example
-
+    
 services:
 #    tabernicola_juke_cloud.example:
 #        class: %tabernicola_juke_cloud.example.class%

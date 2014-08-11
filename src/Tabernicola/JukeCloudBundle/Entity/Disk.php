@@ -235,4 +235,32 @@ class Disk
     {
         return $this->updated;
     }
+    /**
+     * @var string
+     */
+    private $cover;
+
+
+    /**
+     * Set cover
+     *
+     * @param string $cover
+     * @return Disk
+     */
+    public function setCover($cover)
+    {
+        $this->cover = $cover;
+
+        return $this;
+    }
+
+    /**
+     * Get cover
+     *
+     * @return string 
+     */
+    public function getCover()
+    {
+        return $this->cover;
+    }
 }

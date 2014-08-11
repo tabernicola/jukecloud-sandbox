@@ -1,5 +1,6 @@
 /web/bundles/
 /web/extern/
+/web/thumbs/
 /app/bootstrap.php.cache
 /app/cache/*
 /app/config/parameters.yml
