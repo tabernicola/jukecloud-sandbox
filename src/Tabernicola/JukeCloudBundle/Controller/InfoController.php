@@ -21,9 +21,11 @@ class InfoController extends Controller
         if ($song){
             $disk=$song->getDisk();
             $artist=$song->getArtist();
-            $srcPath=null;
             if (!$disk->getCover()){
                 $srcPath=$this->getDiskCover($artist, $disk);
+            }
+            else{
+                $srcPath=$disk->getCover();
             }
             
             // string to put directly in the "src" of the tag <img>
