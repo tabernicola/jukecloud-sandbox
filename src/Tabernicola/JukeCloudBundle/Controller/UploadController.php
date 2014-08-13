@@ -64,6 +64,9 @@ class UploadController extends Controller
                 $msg=$msg;
             }
         }
+        else{
+            return new Response();
+        }
         $id="rmLink-".rand(1, 10000);
         $closeBtn='<div><a id="'.$id.'" href="javascript:removeParentTr(\''.$id.'\')"><i class="right glyphicon glyphicon-remove"></i></a></div>';
         $link='';

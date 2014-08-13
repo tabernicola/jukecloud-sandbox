@@ -21,6 +21,7 @@ class InfoController extends Controller
         if ($song){
             $disk=$song->getDisk();
             $artist=$song->getArtist();
+            $srcPath=null;
             if (!$disk->getCover()){
                 $srcPath=$this->getDiskCover($artist, $disk);
             }
@@ -51,10 +52,10 @@ class InfoController extends Controller
             array('q'=>$artist->getName().' - '.$disk->getTitle())
         )->getPath('results');
         if (is_array($response) && count($response)){
-            $root = $this->container->getParameter('tabernicola_juke_cloud.datadir');
+            $root = $this->container->getParameter('tabernicola_juke_cloud.covers_dir');
             $em = $this->getDoctrine()->getManager();
             $fs = new Filesystem();
-            $path='/covers/'.date("Ym").'/'.$disk->getId().'.jpeg';
+            $path='/'.date("Ym").'/'.$disk->getId().'.jpeg';
             
             $resul=$response[0];
             $thumb=str_replace("api.discogs.com","s.pixogs.com",$resul['thumb']);
