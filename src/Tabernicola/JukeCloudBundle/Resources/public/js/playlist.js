@@ -6,7 +6,7 @@ var Playlist= function(selector){
     this.numElements=0;
     
     $(this.selector).sortable();
-    console.log($(this.selector).selectable().data());
+    $(this.selector).selectable();
     this.activeElement;
    
     //Capture clicks
@@ -163,6 +163,6 @@ $.extend(Playlist.prototype,{
                 this.removeSong($(this.selector+ ' div:first').attr('id'));
             }
         }
-    },
+    }
 });
     

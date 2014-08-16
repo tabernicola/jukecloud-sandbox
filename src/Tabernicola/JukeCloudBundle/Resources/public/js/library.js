@@ -16,30 +16,22 @@ var defaultData={
         return null
     }
 }
-$(document).ready(function() {
+
+$(document).ready(function(){
     $('#library').jstree({
         "core": {
             "check_callback": true,
             "themes": {"stripes": true},
-            "data": defaultData
+            "data": defaultData,
+            "li_height": 10
         },
         "types": {
-            "root": {
-                "icon": "glyphicon glyphicon-home",
-            },
-            "default": {
-                "icon": "glyphicon glyphicon-music",
-            },
-            "artist": {
-                "icon": "glyphicon glyphicon-headphones",
-            },
-            "disk": {
-                "icon": "/bundles/tabernicolajukecloud/img/disc-case.png",
-            }
+            "root": {"icon": "glyphicon glyphicon-home"},
+            "default": {"icon": "glyphicon glyphicon-music"},
+            "artist": {"icon": "glyphicon glyphicon-headphones"},
+            "disk": {"icon": "/bundles/tabernicolajukecloud/img/disc-case.png"}
         },
-        "dnd":{
-            "copy": false,
-        },
+        "dnd":{"copy": false},
         "plugins": [ "types", "wholerow", "dnd"]
     }).on('changed.jstree', function(e, data) {
         //console.log(data);

@@ -22,6 +22,7 @@
         "components/bootstrap": "dev-master",
         "components/font-awesome": "dev-master",
         "components/jqueryui": "dev-master",
+        "components/jquery": "1.*",
         "components/jqueryui-theme-bootstrap": "dev-master",
         "components/jplayer": "dev-master",
         "doctrine/doctrine-fixtures-bundle": "2.2.*",

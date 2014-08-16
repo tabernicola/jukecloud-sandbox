@@ -45,6 +45,11 @@ Tabernicola\JukeCloudBundle\Entity\Song:
             gedmo:
                 timestampable:
                     on: update
+        type:
+            type: string
+            length: 16
+            options:
+                default: local
     manyToOne:
         disk:
             targetEntity: Disk

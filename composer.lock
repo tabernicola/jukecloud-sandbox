@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fbe4b908a768ad545c8143900c29907b",
+    "hash": "5293ea40c2bc718ea2260d5c9d565d82",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -191,16 +191,16 @@
         },
         {
             "name": "components/jquery",
-            "version": "2.1.1",
+            "version": "1.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/jquery.git",
-                "reference": "9e2c56ed9f17e6b55de97ae64a3ed0cf17cd30d4"
+                "reference": "950ba6f21f2b5fab0195a11728cc83c5b147c594"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/components/jquery/zipball/9e2c56ed9f17e6b55de97ae64a3ed0cf17cd30d4",
-                "reference": "9e2c56ed9f17e6b55de97ae64a3ed0cf17cd30d4",
+                "url": "https://api.github.com/repos/components/jquery/zipball/950ba6f21f2b5fab0195a11728cc83c5b147c594",
+                "reference": "950ba6f21f2b5fab0195a11728cc83c5b147c594",
                 "shasum": ""
             },
             "require": {
@@ -214,7 +214,6 @@
                     ],
                     "files": [
                         "jquery.min.js",
-                        "jquery.min.map",
                         "jquery-migrate.js",
                         "jquery-migrate.min.js"
                     ]
@@ -233,7 +232,7 @@
             ],
             "description": "jQuery JavaScript Library",
             "homepage": "http://jquery.com",
-            "time": "2014-07-02 11:52:43"
+            "time": "2014-07-02 11:53:01"
         },
         {
             "name": "components/jqueryui",
@@ -241,12 +240,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/jqueryui.git",
-                "reference": "aec2e4d13d12cdf7f5acfa88c2bbf4481dbe5a72"
+                "reference": "39890e8599bdd79c423ea21b967195106800b87d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/components/jqueryui/zipball/aec2e4d13d12cdf7f5acfa88c2bbf4481dbe5a72",
-                "reference": "aec2e4d13d12cdf7f5acfa88c2bbf4481dbe5a72",
+                "url": "https://api.github.com/repos/components/jqueryui/zipball/39890e8599bdd79c423ea21b967195106800b87d",
+                "reference": "39890e8599bdd79c423ea21b967195106800b87d",
                 "shasum": ""
             },
             "require": {
@@ -313,7 +312,7 @@
                 }
             ],
             "description": "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.",
-            "time": "2014-08-08 13:44:55"
+            "time": "2014-08-13 21:01:50"
         },
         {
             "name": "components/jqueryui-theme-bootstrap",
@@ -1266,16 +1265,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "4.1.7",
+            "version": "4.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "448f2c2076cf0fb756230611491c4f7ecb735a29"
+                "reference": "e196b8f44f9492a11261ea8f7b9724613a198daf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/448f2c2076cf0fb756230611491c4f7ecb735a29",
-                "reference": "448f2c2076cf0fb756230611491c4f7ecb735a29",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/e196b8f44f9492a11261ea8f7b9724613a198daf",
+                "reference": "e196b8f44f9492a11261ea8f7b9724613a198daf",
                 "shasum": ""
             },
             "require": {
@@ -1327,7 +1326,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2014-08-08 01:30:43"
+            "time": "2014-08-14 20:29:51"
         },
         {
             "name": "guzzlehttp/guzzle-services",
@@ -1418,16 +1417,16 @@
         },
         {
             "name": "guzzlehttp/streams",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/streams.git",
-                "reference": "78f73ec74a87d5c6c29279119773693cc732789e"
+                "reference": "fb0d1ee29987c2bdc59867bffaade6fc88c2675f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/streams/zipball/78f73ec74a87d5c6c29279119773693cc732789e",
-                "reference": "78f73ec74a87d5c6c29279119773693cc732789e",
+                "url": "https://api.github.com/repos/guzzle/streams/zipball/fb0d1ee29987c2bdc59867bffaade6fc88c2675f",
+                "reference": "fb0d1ee29987c2bdc59867bffaade6fc88c2675f",
                 "shasum": ""
             },
             "require": {
@@ -1467,7 +1466,7 @@
                 "Guzzle",
                 "stream"
             ],
-            "time": "2014-08-08 01:24:01"
+            "time": "2014-08-10 23:57:01"
         },
         {
             "name": "imagine/imagine",
@@ -2823,17 +2822,17 @@
         },
         {
             "name": "zendframework/zend-escaper",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "target-dir": "Zend/Escaper",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendEscaper.git",
-                "reference": "ec2614db2ea860c5765a0adba687eacb365ad355"
+                "reference": "dddee2104337bbf3522f9ef591c361a40aabf7cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendEscaper/zipball/ec2614db2ea860c5765a0adba687eacb365ad355",
-                "reference": "ec2614db2ea860c5765a0adba687eacb365ad355",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendEscaper/zipball/dddee2104337bbf3522f9ef591c361a40aabf7cc",
+                "reference": "dddee2104337bbf3522f9ef591c361a40aabf7cc",
                 "shasum": ""
             },
             "require": {
@@ -2842,8 +2841,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev",
-                    "dev-develop": "2.3-dev"
+                    "dev-master": "2.3-dev",
+                    "dev-develop": "2.4-dev"
                 }
             },
             "autoload": {
@@ -2859,21 +2858,21 @@
                 "escaper",
                 "zf2"
             ],
-            "time": "2014-03-14 16:21:02"
+            "time": "2014-04-15 15:29:16"
         },
         {
             "name": "zendframework/zend-http",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "target-dir": "Zend/Http",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendHttp.git",
-                "reference": "6d4314b1e3309071f3ab958186911296d70fe5fe"
+                "reference": "b13fc4c30c39364409ef68a9f9b5975765a3ff5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendHttp/zipball/6d4314b1e3309071f3ab958186911296d70fe5fe",
-                "reference": "6d4314b1e3309071f3ab958186911296d70fe5fe",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendHttp/zipball/b13fc4c30c39364409ef68a9f9b5975765a3ff5a",
+                "reference": "b13fc4c30c39364409ef68a9f9b5975765a3ff5a",
                 "shasum": ""
             },
             "require": {
@@ -2886,8 +2885,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev",
-                    "dev-develop": "2.3-dev"
+                    "dev-master": "2.3-dev",
+                    "dev-develop": "2.4-dev"
                 }
             },
             "autoload": {
@@ -2904,21 +2903,21 @@
                 "http",
                 "zf2"
             ],
-            "time": "2014-03-14 16:21:21"
+            "time": "2014-04-15 14:47:18"
         },
         {
             "name": "zendframework/zend-i18n",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "target-dir": "Zend/I18n",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendI18n.git",
-                "reference": "d90492e9771917392404ac0d53f09582d6462ec3"
+                "reference": "d4a47acdb480e11d81432c0fb3431a54ebe4d077"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendI18n/zipball/d90492e9771917392404ac0d53f09582d6462ec3",
-                "reference": "d90492e9771917392404ac0d53f09582d6462ec3",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendI18n/zipball/d4a47acdb480e11d81432c0fb3431a54ebe4d077",
+                "reference": "d4a47acdb480e11d81432c0fb3431a54ebe4d077",
                 "shasum": ""
             },
             "require": {
@@ -2948,8 +2947,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev",
-                    "dev-develop": "2.3-dev"
+                    "dev-master": "2.3-dev",
+                    "dev-develop": "2.4-dev"
                 }
             },
             "autoload": {
@@ -2965,21 +2964,21 @@
                 "i18n",
                 "zf2"
             ],
-            "time": "2014-03-14 16:21:23"
+            "time": "2014-04-15 15:28:41"
         },
         {
             "name": "zendframework/zend-json",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "target-dir": "Zend/Json",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendJson.git",
-                "reference": "eedf099fb5cfc0a5735ee4e3a2fbed9fadedca6e"
+                "reference": "eb281da42d3f5bba5acb664359029b6fa7c62e28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendJson/zipball/eedf099fb5cfc0a5735ee4e3a2fbed9fadedca6e",
-                "reference": "eedf099fb5cfc0a5735ee4e3a2fbed9fadedca6e",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendJson/zipball/eb281da42d3f5bba5acb664359029b6fa7c62e28",
+                "reference": "eb281da42d3f5bba5acb664359029b6fa7c62e28",
                 "shasum": ""
             },
             "require": {
@@ -2997,8 +2996,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev",
-                    "dev-develop": "2.3-dev"
+                    "dev-master": "2.3-dev",
+                    "dev-develop": "2.4-dev"
                 }
             },
             "autoload": {
@@ -3015,21 +3014,21 @@
                 "json",
                 "zf2"
             ],
-            "time": "2014-03-12 17:04:14"
+            "time": "2014-04-15 14:47:18"
         },
         {
             "name": "zendframework/zend-loader",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "target-dir": "Zend/Loader",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendLoader.git",
-                "reference": "517f39de5c547d438556e86c270b384c9dee5b18"
+                "reference": "37abb23b0b2608584673f8388d1563a1fd604f09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendLoader/zipball/517f39de5c547d438556e86c270b384c9dee5b18",
-                "reference": "517f39de5c547d438556e86c270b384c9dee5b18",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendLoader/zipball/37abb23b0b2608584673f8388d1563a1fd604f09",
+                "reference": "37abb23b0b2608584673f8388d1563a1fd604f09",
                 "shasum": ""
             },
             "require": {
@@ -3038,8 +3037,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev",
-                    "dev-develop": "2.3-dev"
+                    "dev-master": "2.3-dev",
+                    "dev-develop": "2.4-dev"
                 }
             },
             "autoload": {
@@ -3055,21 +3054,21 @@
                 "loader",
                 "zf2"
             ],
-            "time": "2014-03-14 16:21:32"
+            "time": "2014-04-15 15:28:53"
         },
         {
             "name": "zendframework/zend-stdlib",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "target-dir": "Zend/Stdlib",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendStdlib.git",
-                "reference": "d1c481b8a43f2f079b16d3567960ba539e9dacaa"
+                "reference": "c1f4830018b5d4f034d32fa01a9e17ea176f56f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendStdlib/zipball/d1c481b8a43f2f079b16d3567960ba539e9dacaa",
-                "reference": "d1c481b8a43f2f079b16d3567960ba539e9dacaa",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendStdlib/zipball/c1f4830018b5d4f034d32fa01a9e17ea176f56f6",
+                "reference": "c1f4830018b5d4f034d32fa01a9e17ea176f56f6",
                 "shasum": ""
             },
             "require": {
@@ -3088,8 +3087,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev",
-                    "dev-develop": "2.3-dev"
+                    "dev-master": "2.3-dev",
+                    "dev-develop": "2.4-dev"
                 }
             },
             "autoload": {
@@ -3105,21 +3104,21 @@
                 "stdlib",
                 "zf2"
             ],
-            "time": "2014-03-14 16:22:22"
+            "time": "2014-04-15 15:28:48"
         },
         {
             "name": "zendframework/zend-uri",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "target-dir": "Zend/Uri",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendUri.git",
-                "reference": "83e617b6273625eeb771c8fb3e886a728fd9dfa4"
+                "reference": "cf120804a7ef1b906979b110c6f34c8592a7c36b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendUri/zipball/83e617b6273625eeb771c8fb3e886a728fd9dfa4",
-                "reference": "83e617b6273625eeb771c8fb3e886a728fd9dfa4",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendUri/zipball/cf120804a7ef1b906979b110c6f34c8592a7c36b",
+                "reference": "cf120804a7ef1b906979b110c6f34c8592a7c36b",
                 "shasum": ""
             },
             "require": {
@@ -3130,8 +3129,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev",
-                    "dev-develop": "2.3-dev"
+                    "dev-master": "2.3-dev",
+                    "dev-develop": "2.4-dev"
                 }
             },
             "autoload": {
@@ -3148,21 +3147,21 @@
                 "uri",
                 "zf2"
             ],
-            "time": "2014-03-14 16:22:34"
+            "time": "2014-04-15 14:47:18"
         },
         {
             "name": "zendframework/zend-validator",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "target-dir": "Zend/Validator",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendValidator.git",
-                "reference": "1d4526a1f7db36d725a3a526d8951c1a6d0d69b3"
+                "reference": "ac9848e54c6c75de81ee7a82c3187cd25a898990"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendValidator/zipball/1d4526a1f7db36d725a3a526d8951c1a6d0d69b3",
-                "reference": "1d4526a1f7db36d725a3a526d8951c1a6d0d69b3",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendValidator/zipball/ac9848e54c6c75de81ee7a82c3187cd25a898990",
+                "reference": "ac9848e54c6c75de81ee7a82c3187cd25a898990",
                 "shasum": ""
             },
             "require": {
@@ -3191,8 +3190,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev",
-                    "dev-develop": "2.3-dev"
+                    "dev-master": "2.3-dev",
+                    "dev-develop": "2.4-dev"
                 }
             },
             "autoload": {
@@ -3209,7 +3208,7 @@
                 "validator",
                 "zf2"
             ],
-            "time": "2014-03-14 16:22:37"
+            "time": "2014-04-15 15:28:42"
         }
     ],
     "packages-dev": [

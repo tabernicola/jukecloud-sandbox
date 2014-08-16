@@ -29,12 +29,33 @@ class Disk
      */
     private $artist;
 
+        /**
+     * @var string
+     */
+    private $slug;
+
+    /**
+     * @var string
+     */
+    private $cover='';
+
+    /**
+     * @var \DateTime
+     */
+    private $created;
+
+    /**
+     * @var \DateTime
+     */
+    private $updated;
+
     /**
      * Constructor
      */
     public function __construct()
     {
         $this->songs = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->setCover('');
     }
 
     /**
@@ -151,11 +172,6 @@ class Disk
     public function __toString() {
         return "\nDisk: ".$this->getTitle();
     }
-    /**
-     * @var string
-     */
-    private $slug;
-
 
     /**
      * Set slug
@@ -179,16 +195,6 @@ class Disk
     {
         return $this->slug;
     }
-    /**
-     * @var \DateTime
-     */
-    private $created;
-
-    /**
-     * @var \DateTime
-     */
-    private $updated;
-
 
     /**
      * Set created
@@ -235,11 +241,7 @@ class Disk
     {
         return $this->updated;
     }
-    /**
-     * @var string
-     */
-    private $cover;
-
+    
 
     /**
      * Set cover

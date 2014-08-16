@@ -22,7 +22,7 @@ ID3v2 = {
             "11": "A bright coloured fish", //<--- WTF?
             "12": "Illustration",
             "13": "Band/artist logotype",
-            "14": "Publisher/Studio logotype",
+            "14": "Publisher/Studio logotype"
         }
 
         //from: http://bitbucket.org/moumar/ruby-mp3info/src/tip/lib/mp3info/id3v2.rb

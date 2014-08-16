@@ -33,12 +33,42 @@ class Song
      * @var files
      */
     private $files;
-    
+
     /**
-     * @var file (false var)
+     * @var files
      */
     private $file;
-    
+
+    /**
+     * @var integer
+     */
+    private $number;
+
+    /**
+     * @var string
+     */
+    private $slug;
+
+    /**
+     * @var \DateTime
+     */
+    private $created;
+
+    /**
+     * @var \DateTime
+     */
+    private $updated;
+
+    /**
+     * @var string
+     */
+    private $type='local';
+
+    /**
+     * @var string
+     */
+    private $path;
+
     /**
      * Set id
      *
@@ -130,12 +160,7 @@ class Song
     {
         return $this->artist;
     }
-    /**
-     * @var string
-     */
-    private $path;
-
-
+    
     /**
      * Set path
      *
@@ -167,12 +192,7 @@ class Song
         $node->children = false;
         return $node;
     }
-    /**
-     * @var integer
-     */
-    private $number;
-
-
+    
     /**
      * Set number
      *
@@ -249,11 +269,6 @@ class Song
     public function __toString() {
         return "\nSong: ".$this->getTitle().$this->getArtist().$this->getDisk();
     }
-    /**
-     * @var string
-     */
-    private $slug;
-
 
     /**
      * Set slug
@@ -277,16 +292,6 @@ class Song
     {
         return $this->slug;
     }
-    /**
-     * @var \DateTime
-     */
-    private $created;
-
-    /**
-     * @var \DateTime
-     */
-    private $updated;
-
 
     /**
      * Set created
@@ -332,5 +337,28 @@ class Song
     public function getUpdated()
     {
         return $this->updated;
+    }
+
+    /**
+     * Set type
+     *
+     * @param string $type
+     * @return Song
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return string 
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 }

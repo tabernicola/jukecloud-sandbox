@@ -2,7 +2,8 @@
     <head>
         <title>{%block title %}JukeCloud{% endblock %}</title>
         {%block metas %}
-            <meta content="text/html; charset=utf-8" http-equiv="X-UA-Compatible" content="IE=edge"/>
+            <meta content="text/html; charset=utf-8"/>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
         {% endblock %}
 
@@ -19,6 +20,9 @@
             <link rel="stylesheet" href="/jstree/themes/default/style.min.css" />
             <link rel="stylesheet" href="/blueimp-fileupload/css/jquery.fileupload.css" />
             <link rel="stylesheet" href="/blueimp-fileupload/css/jquery.fileupload-ui.css" />
+            <!--[if IE]>
+            <link rel="stylesheet" href="{{ asset(components_folder ~ 'jqueryui-theme-bootstrap/jquery.ui.1.10.3.ie.css')}}"/>
+            <![endif]-->
         {% endblock %}
 
     </head>
