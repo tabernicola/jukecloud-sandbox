@@ -25,7 +25,7 @@ var Playlist= function(selector){
     } );
     
     var playlist=this;
-    $(document).keypress(function( event ) {
+    $(document).keydown(function( event ) {
         if (event.keyCode==46){
             $(playlist.selector+' .ui-selected').each(function (index,elem){
                 playlist.removeSong($(elem).parent().attr('id'));
