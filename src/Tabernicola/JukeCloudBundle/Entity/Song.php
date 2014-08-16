@@ -257,9 +257,7 @@ class Song
             if (file_exists($dest)){
                 throw new \Exception("A song with the same name exist");
             }
-            if(!$res=$file->move($uploadDir.'/',$this->getTitle().'.'.$file->guessExtension())){
-                throw new \Exception("Error saving the file");
-            }
+            $res=$file->move($uploadDir.'/',$this->getTitle().'.'.$file->guessExtension());
             $this->setPath($uploadDir.'/'.$this->getTitle().'.'.$res->getExtension());
             return $this->getPath();
         }
