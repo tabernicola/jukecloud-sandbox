@@ -4,20 +4,20 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5293ea40c2bc718ea2260d5c9d565d82",
+    "hash": "7c26cab79b357fc301d0ba73b9be099c",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
-            "version": "dev-master",
+            "version": "9.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vkhramtsov/jQuery-File-Upload.git",
-                "reference": "496d9ab9d93568823e612a2265919f34ae714fa4"
+                "reference": "ce1c75bede2c221c9066dce73cae75dcf1116044"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/496d9ab9d93568823e612a2265919f34ae714fa4",
-                "reference": "496d9ab9d93568823e612a2265919f34ae714fa4",
+                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/ce1c75bede2c221c9066dce73cae75dcf1116044",
+                "reference": "ce1c75bede2c221c9066dce73cae75dcf1116044",
                 "shasum": ""
             },
             "type": "library",
@@ -54,11 +54,11 @@
                 "upload",
                 "widget"
             ],
-            "time": "2014-07-22 08:26:16"
+            "time": "2014-07-22 08:28:02"
         },
         {
             "name": "components/bootstrap",
-            "version": "dev-master",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/bootstrap.git",
@@ -115,7 +115,7 @@
         },
         {
             "name": "components/font-awesome",
-            "version": "dev-master",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/font-awesome.git",
@@ -236,7 +236,7 @@
         },
         {
             "name": "components/jqueryui",
-            "version": "dev-master",
+            "version": "1.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/jqueryui.git",
@@ -1700,7 +1700,7 @@
         },
         {
             "name": "liip/imagine-bundle",
-            "version": "dev-master",
+            "version": "1.0.4",
             "target-dir": "Liip/ImagineBundle",
             "source": {
                 "type": "git",
@@ -2263,21 +2263,21 @@
         },
         {
             "name": "stof/doctrine-extensions-bundle",
-            "version": "dev-master",
+            "version": "v1.1.0",
             "target-dir": "Stof/DoctrineExtensionsBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stof/StofDoctrineExtensionsBundle.git",
-                "reference": "085cda7ce5dc12b807a5a7856f178c93725a9166"
+                "reference": "0aa21137bcae43241ffa047946bbdd46b91a2b0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stof/StofDoctrineExtensionsBundle/zipball/085cda7ce5dc12b807a5a7856f178c93725a9166",
-                "reference": "085cda7ce5dc12b807a5a7856f178c93725a9166",
+                "url": "https://api.github.com/repos/stof/StofDoctrineExtensionsBundle/zipball/0aa21137bcae43241ffa047946bbdd46b91a2b0a",
+                "reference": "0aa21137bcae43241ffa047946bbdd46b91a2b0a",
                 "shasum": ""
             },
             "require": {
-                "gedmo/doctrine-extensions": "~2.3.1",
+                "gedmo/doctrine-extensions": "2.3.*",
                 "php": ">=5.3.2",
                 "symfony/framework-bundle": "~2.1"
             },
@@ -2321,7 +2321,7 @@
                 "translatable",
                 "tree"
             ],
-            "time": "2014-07-08 17:06:10"
+            "time": "2013-06-23 16:53:41"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2713,6 +2713,66 @@
                 "framework"
             ],
             "time": "2014-07-15 14:20:44"
+        },
+        {
+            "name": "tabernicola/jukecloud-bundle",
+            "version": "dev-master",
+            "target-dir": "Tabernicola/JukeCloudBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tabernicola/JukeCloudBundle.git",
+                "reference": "f448df78ed9863ef46831cd236631392119b083e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tabernicola/JukeCloudBundle/zipball/f448df78ed9863ef46831cd236631392119b083e",
+                "reference": "f448df78ed9863ef46831cd236631392119b083e",
+                "shasum": ""
+            },
+            "require": {
+                "blueimp/jquery-file-upload": "9.7.*",
+                "components/bootstrap": "3.2.*",
+                "components/font-awesome": "4.1.*",
+                "components/jplayer": "*",
+                "components/jquery": "1.*",
+                "components/jqueryui": "1.11.*",
+                "components/jqueryui-theme-bootstrap": "*",
+                "doctrine/doctrine-fixtures-bundle": "2.2.*",
+                "echonest/echonest": "*",
+                "liip/imagine-bundle": "1.0.*",
+                "nass600/get-id3": "*",
+                "nass600/lyrics-bundle": "*",
+                "php": ">=5.3.2",
+                "ricbra/discogs-bundle": "~1.0.0",
+                "stof/doctrine-extensions-bundle": "1.1.*",
+                "symfony/framework-bundle": "~2.3"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Tabernicola\\JukeCloudBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tabernicola",
+                    "homepage": "https://github.com/tabernicola/JukeCloudBundle"
+                }
+            ],
+            "description": "Jukebox bundle for Symfony",
+            "keywords": [
+                "jukebox",
+                "jukecloud",
+                "library",
+                "music",
+                "player",
+                "playlist"
+            ],
+            "time": "2014-08-17 10:57:15"
         },
         {
             "name": "twig/extensions",
@@ -3219,18 +3279,14 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "components/bootstrap": 20,
-        "components/font-awesome": 20,
-        "components/jqueryui": 20,
+        "tabernicola/jukecloud-bundle": 20,
         "components/jqueryui-theme-bootstrap": 20,
         "components/jplayer": 20,
-        "blueimp/jquery-file-upload": 20,
-        "stof/doctrine-extensions-bundle": 20,
         "nass600/get-id3": 20,
         "nass600/lyrics-bundle": 20,
-        "echonest/echonest": 20,
-        "liip/imagine-bundle": 20
+        "echonest/echonest": 20
     },
+    "prefer-stable": false,
     "platform": {
         "php": ">=5.3.3"
     },

@@ -75,3 +75,6 @@ stof_doctrine_extensions:
             
 ricbra_discogs:
     user_agent: "TabernicolaJukecloudBundle/0.1 +http://tabernicola.es"
+
+tabernicola_juke_cloud:
+    plugins: ~

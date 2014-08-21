@@ -1,8 +1,8 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "tabernicola/jukecloud-sandbox",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "The \"JukeCloud\" sandbox",
     "autoload": {
         "psr-0": { "": "src/" }
     },
@@ -19,20 +19,12 @@
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
-        "components/bootstrap": "dev-master",
-        "components/font-awesome": "dev-master",
-        "components/jqueryui": "dev-master",
-        "components/jquery": "1.*",
-        "components/jqueryui-theme-bootstrap": "dev-master",
-        "components/jplayer": "dev-master",
-        "doctrine/doctrine-fixtures-bundle": "2.2.*",
-        "blueimp/jquery-file-upload": "dev-master",
-        "stof/doctrine-extensions-bundle": "1.1.*@dev",
-        "nass600/get-id3": "dev-master",
-        "nass600/Lyrics-bundle": "dev-master",
-        "ricbra/discogs-bundle": "~1.0.0",
-        "echonest/echonest": "dev-master",
-        "liip/imagine-bundle": "dev-master"
+        "tabernicola/jukecloud-bundle": "dev-master",
+        "components/jqueryui-theme-bootstrap": "@dev",
+        "components/jplayer": "@dev",
+        "nass600/get-id3": "@dev",
+        "nass600/lyrics-bundle": "@dev",
+        "echonest/echonest": "@dev"                
     },
     "scripts": {
         "post-install-cmd": [
