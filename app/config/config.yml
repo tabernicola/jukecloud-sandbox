@@ -77,4 +77,7 @@ ricbra_discogs:
     user_agent: "TabernicolaJukecloudBundle/0.1 +http://tabernicola.es"
 
 tabernicola_juke_cloud:
-    plugins: ~
+    plugins:
+        info: [tabernicola_juke_cloud.plugins.init_info]
+        playlist: ~
+        library: ~
