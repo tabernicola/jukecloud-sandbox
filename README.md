@@ -28,7 +28,11 @@ Create the database structure
 
 2) Browsing the Demo Application
 --------------------------------
-Configure Apache
+Run 
+
+    php app/console server:run
+    
+or configure apache with https://github.com/tabernicola/jukecloud-sandbox/blob/master/app/Resources/doc/apache-vhost.conf.example
 
 Congratulations! You're now ready to use Jukecloud.
 
