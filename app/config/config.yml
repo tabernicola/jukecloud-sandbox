@@ -79,5 +79,5 @@ ricbra_discogs:
 tabernicola_juke_cloud:
     plugins:
         info: [tabernicola_juke_cloud.plugins.init_info]
-        playlist: ~
+        playlist: [tabernicola_juke_cloud.plugins.local,tabernicola_juke_cloud.plugins.youtube]
         library: ~
