@@ -81,3 +81,5 @@ tabernicola_juke_cloud:
         info: [tabernicola_juke_cloud.plugins.init_info]
         playlist: [tabernicola_juke_cloud.plugins.local,tabernicola_juke_cloud.plugins.youtube]
         library: ~
+    youtube_plugin:
+        apikey: %youtube_api_key%

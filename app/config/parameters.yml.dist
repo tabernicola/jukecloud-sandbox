@@ -16,5 +16,7 @@ parameters:
 
     components-folder: extern/
 
+    youtube_api_key: "sdfsdgdfgd"
+
     discogs_consumer_key: ""
     discogs_consumer_secret: ""
