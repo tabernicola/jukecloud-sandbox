@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "827e17ec7a2318aa70bbf70d66a7ef32",
+    "hash": "89c3645157c48c1ece14b15599d3afda",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -353,17 +353,68 @@
             "time": "2014-06-13 08:07:17"
         },
         {
-            "name": "doctrine/annotations",
-            "version": "v1.2.0",
+            "name": "dandelionmood/lastfm",
+            "version": "v0.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/doctrine/annotations.git",
-                "reference": "d9b1a37e9351ddde1f19f09a02e3d6ee92e82efd"
+                "url": "https://github.com/dandelionmood/php-lastfm.git",
+                "reference": "6d5ccb8139c470da5fa7d93f1a6f6b9969ded6e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/d9b1a37e9351ddde1f19f09a02e3d6ee92e82efd",
-                "reference": "d9b1a37e9351ddde1f19f09a02e3d6ee92e82efd",
+                "url": "https://api.github.com/repos/dandelionmood/php-lastfm/zipball/6d5ccb8139c470da5fa7d93f1a6f6b9969ded6e4",
+                "reference": "6d5ccb8139c470da5fa7d93f1a6f6b9969ded6e4",
+                "shasum": ""
+            },
+            "require": {
+                "kriswallsmith/buzz": ">=0.9",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "apigen/apigen": "2.8.0",
+                "phpunit/phpunit": "3.7.18"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Dandelionmood": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Quillery",
+                    "email": "pierre+lastfm@quillery.fr",
+                    "homepage": "http://pierre.quillery.fr/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Dead simple wrapper for the Last.fm API.",
+            "homepage": "https://github.com/dandelionmood/php-lastfm",
+            "keywords": [
+                "api",
+                "fm",
+                "last",
+                "last.fm",
+                "wrapper"
+            ],
+            "time": "2014-08-23 20:16:32"
+        },
+        {
+            "name": "doctrine/annotations",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/annotations.git",
+                "reference": "6a6bec0670bb6e71a263b08bc1b98ea242928633"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/6a6bec0670bb6e71a263b08bc1b98ea242928633",
+                "reference": "6a6bec0670bb6e71a263b08bc1b98ea242928633",
                 "shasum": ""
             },
             "require": {
@@ -391,17 +442,6 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/",
-                    "role": "Creator"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com",
-                    "homepage": "http://www.instaclick.com"
-                },
-                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
@@ -410,10 +450,16 @@
                     "email": "kontakt@beberlei.de"
                 },
                 {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
                     "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
-                    "role": "Developer of wrapped JMSSerializerBundle"
+                    "email": "schmittjoh@gmail.com"
                 }
             ],
             "description": "Docblock Annotations Parser",
@@ -423,7 +469,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2014-07-06 15:52:21"
+            "time": "2014-09-25 16:45:30"
         },
         {
             "name": "doctrine/cache",
@@ -1012,16 +1058,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "v2.4.4",
+            "version": "v2.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "fc19c3b53dcd00e6584db40669fdd699c4671f97"
+                "reference": "bebacf79d8d4dae9168f0f9bc6811e6c2cb6a4d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/fc19c3b53dcd00e6584db40669fdd699c4671f97",
-                "reference": "fc19c3b53dcd00e6584db40669fdd699c4671f97",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/bebacf79d8d4dae9168f0f9bc6811e6c2cb6a4d9",
+                "reference": "bebacf79d8d4dae9168f0f9bc6811e6c2cb6a4d9",
                 "shasum": ""
             },
             "require": {
@@ -1059,23 +1105,20 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/",
-                    "role": "Creator"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com",
-                    "homepage": "http://www.instaclick.com"
-                },
-                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
                     "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
                 }
             ],
             "description": "Object-Relational-Mapper for PHP",
@@ -1084,7 +1127,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2014-07-11 03:05:53"
+            "time": "2014-10-06 13:22:50"
         },
         {
             "name": "echonest/echonest",
@@ -1211,257 +1254,6 @@
                 "uploadable"
             ],
             "time": "2014-01-12 16:34:06"
-        },
-        {
-            "name": "guzzlehttp/command",
-            "version": "0.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/command.git",
-                "reference": "e2004b2ef217f14380f46bea9ebe8ecce3cecf7a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/command/zipball/e2004b2ef217f14380f46bea9ebe8ecce3cecf7a",
-                "reference": "e2004b2ef217f14380f46bea9ebe8ecce3cecf7a",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "~4.0",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.6-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Command\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
-            "description": "Provides the foundation for building command based web service clients",
-            "time": "2014-08-08 16:41:48"
-        },
-        {
-            "name": "guzzlehttp/guzzle",
-            "version": "4.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "9c4fbbf6457768f5036fbd88f1229f3fca812a5d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/9c4fbbf6457768f5036fbd88f1229f3fca812a5d",
-                "reference": "9c4fbbf6457768f5036fbd88f1229f3fca812a5d",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "guzzlehttp/streams": "~2.1",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "ext-curl": "*",
-                "phpunit/phpunit": "~4.0",
-                "psr/log": "~1.0"
-            },
-            "suggest": {
-                "ext-curl": "Guzzle will use specific adapters if cURL is present"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\": "src/"
-                },
-                "files": [
-                    "src/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
-            "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
-            "homepage": "http://guzzlephp.org/",
-            "keywords": [
-                "client",
-                "curl",
-                "framework",
-                "http",
-                "http client",
-                "rest",
-                "web service"
-            ],
-            "time": "2014-09-08 22:11:58"
-        },
-        {
-            "name": "guzzlehttp/guzzle-services",
-            "version": "0.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/guzzle-services.git",
-                "reference": "689dfa73b65e2c0a74184a5fb8c5a6ef0b160911"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle-services/zipball/689dfa73b65e2c0a74184a5fb8c5a6ef0b160911",
-                "reference": "689dfa73b65e2c0a74184a5fb8c5a6ef0b160911",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/command": "~0.2",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Command\\Guzzle\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
-            "description": "Provides an implementation of the Guzzle Command library that uses Guzzle service descriptions to describe web services, serialize requests, and parse responses into easy to use model structures.",
-            "time": "2014-06-01 20:00:25"
-        },
-        {
-            "name": "guzzlehttp/oauth-subscriber",
-            "version": "0.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/oauth-subscriber.git",
-                "reference": "f5e857b5ab34279611c171111c40000435299698"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/oauth-subscriber/zipball/f5e857b5ab34279611c171111c40000435299698",
-                "reference": "f5e857b5ab34279611c171111c40000435299698",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "~4.0",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Subscriber\\Oauth\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
-            "description": "Guzzle OAuth 1.0 subscriber",
-            "homepage": "http://guzzlephp.org/",
-            "keywords": [
-                "Guzzle",
-                "oauth"
-            ],
-            "time": "2014-05-20 00:04:02"
-        },
-        {
-            "name": "guzzlehttp/streams",
-            "version": "2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/streams.git",
-                "reference": "f91b721d73f0e561410903b3b3c90a5d0e40b534"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/streams/zipball/f91b721d73f0e561410903b3b3c90a5d0e40b534",
-                "reference": "f91b721d73f0e561410903b3b3c90a5d0e40b534",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Stream\\": "src/"
-                },
-                "files": [
-                    "src/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
-            "description": "Provides a simple abstraction over streams of data (Guzzle 4+)",
-            "homepage": "http://guzzlephp.org/",
-            "keywords": [
-                "Guzzle",
-                "stream"
-            ],
-            "time": "2014-08-17 21:15:53"
         },
         {
             "name": "imagine/imagine",
@@ -1694,6 +1486,54 @@
             "time": "2013-07-19 00:03:27"
         },
         {
+            "name": "kriswallsmith/buzz",
+            "version": "v0.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kriswallsmith/Buzz.git",
+                "reference": "487760b05d6269a4c2c374364325326cfa65b12c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kriswallsmith/Buzz/zipball/487760b05d6269a4c2c374364325326cfa65b12c",
+                "reference": "487760b05d6269a4c2c374364325326cfa65b12c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "suggest": {
+                "ext-curl": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Buzz": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kris Wallsmith",
+                    "email": "kris.wallsmith@gmail.com",
+                    "homepage": "http://kriswallsmith.net/"
+                }
+            ],
+            "description": "Lightweight HTTP client",
+            "homepage": "https://github.com/kriswallsmith/Buzz",
+            "keywords": [
+                "curl",
+                "http client"
+            ],
+            "time": "2014-09-15 12:42:36"
+        },
+        {
             "name": "liip/imagine-bundle",
             "version": "1.0.6",
             "target-dir": "Liip/ImagineBundle",
@@ -1814,21 +1654,24 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.10.0",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "25b16e801979098cb2f120e697bfce454b18bf23"
+                "reference": "ec3961874c43840e96da3a8a1ed20d8c73d7e5aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/25b16e801979098cb2f120e697bfce454b18bf23",
-                "reference": "25b16e801979098cb2f120e697bfce454b18bf23",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/ec3961874c43840e96da3a8a1ed20d8c73d7e5aa",
+                "reference": "ec3961874c43840e96da3a8a1ed20d8c73d7e5aa",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0",
                 "psr/log": "~1.0"
+            },
+            "provide": {
+                "psr/log-implementation": "1.0.0"
             },
             "require-dev": {
                 "aws/aws-sdk-php": "~2.4, >2.4.8",
@@ -1836,7 +1679,8 @@
                 "graylog2/gelf-php": "~1.0",
                 "phpunit/phpunit": "~3.7.0",
                 "raven/raven": "~0.5",
-                "ruflin/elastica": "0.90.*"
+                "ruflin/elastica": "0.90.*",
+                "videlalvaro/php-amqplib": "~2.4"
             },
             "suggest": {
                 "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
@@ -1846,12 +1690,13 @@
                 "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
                 "raven/raven": "Allow sending log messages to a Sentry server",
                 "rollbar/rollbar": "Allow sending log messages to Rollbar",
-                "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
+                "videlalvaro/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.10.x-dev"
+                    "dev-master": "1.11.x-dev"
                 }
             },
             "autoload": {
@@ -1867,8 +1712,7 @@
                 {
                     "name": "Jordi Boggiano",
                     "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be",
-                    "role": "Developer"
+                    "homepage": "http://seld.be"
                 }
             ],
             "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
@@ -1878,7 +1722,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2014-06-04 16:30:04"
+            "time": "2014-09-30 13:30:58"
         },
         {
             "name": "nass600/get-id3",
@@ -2005,110 +1849,6 @@
                 "psr-3"
             ],
             "time": "2012-12-21 11:40:51"
-        },
-        {
-            "name": "ricbra/discogs-bundle",
-            "version": "1.0.0",
-            "target-dir": "Ricbra/Bundle/DiscogsBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ricbra/RicbraDiscogsBundle.git",
-                "reference": "d3e3683c9c04de9a964d5831b009fb3dbb5edb63"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ricbra/RicbraDiscogsBundle/zipball/d3e3683c9c04de9a964d5831b009fb3dbb5edb63",
-                "reference": "d3e3683c9c04de9a964d5831b009fb3dbb5edb63",
-                "shasum": ""
-            },
-            "require": {
-                "ricbra/php-discogs-api": "~1.0.3"
-            },
-            "suggest": {
-                "hwi/oauth-bundle": "Enable OAuth support using HWIOAuthBundle"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Ricbra\\Bundle\\DiscogsBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Richard van den Brand",
-                    "email": "richard@vandenbrand.org"
-                }
-            ],
-            "description": "Bundle around the Discogs API client",
-            "homepage": "https://github.com/ricbra/RicbraDiscogsBundle",
-            "keywords": [
-                "api",
-                "discogs"
-            ],
-            "time": "2014-08-08 20:05:55"
-        },
-        {
-            "name": "ricbra/php-discogs-api",
-            "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ricbra/php-discogs-api.git",
-                "reference": "75969407017c65717e11c817b15c5a380bae1fd0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ricbra/php-discogs-api/zipball/75969407017c65717e11c817b15c5a380bae1fd0",
-                "reference": "75969407017c65717e11c817b15c5a380bae1fd0",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "~4.0",
-                "guzzlehttp/guzzle-services": "~0.3.0",
-                "guzzlehttp/oauth-subscriber": "~0.1.2",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4"
-            },
-            "suggest": {
-                "ricbra/discogs-bundle": "For integrating Discogs into Symfony2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Discogs": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Richard van den Brand",
-                    "email": "richard@vandenbrand.org"
-                }
-            ],
-            "description": "The Discogs API makes it easy for developers to communicate with the Discogs platform",
-            "keywords": [
-                "api",
-                "discogs"
-            ],
-            "time": "2014-08-08 19:58:12"
         },
         {
             "name": "robloach/component-installer",
@@ -2363,20 +2103,20 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.2.2",
+            "version": "v5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "e02f71a35436af4bd58a1bd90116089e632e29e1"
+                "reference": "b86b927dfefdb56ab0b22d1350033d9a38e9f205"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/e02f71a35436af4bd58a1bd90116089e632e29e1",
-                "reference": "e02f71a35436af4bd58a1bd90116089e632e29e1",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/b86b927dfefdb56ab0b22d1350033d9a38e9f205",
+                "reference": "b86b927dfefdb56ab0b22d1350033d9a38e9f205",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.2.4"
+                "php": ">=5.3.3"
             },
             "require-dev": {
                 "mockery/mockery": "~0.9.1"
@@ -2384,7 +2124,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.2-dev"
+                    "dev-master": "5.3-dev"
                 }
             },
             "autoload": {
@@ -2411,7 +2151,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2014-09-20 07:17:36"
+            "time": "2014-10-04 05:53:18"
         },
         {
             "name": "symfony/assetic-bundle",
@@ -2642,16 +2382,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.3.19",
+            "version": "v2.3.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "1fc05758044fa1cf54460d7d4aff5f55b0f1b0db"
+                "reference": "5ef0ea8414fd61df090f6aa60a3d78bfb4d8bd1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/1fc05758044fa1cf54460d7d4aff5f55b0f1b0db",
-                "reference": "1fc05758044fa1cf54460d7d4aff5f55b0f1b0db",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/5ef0ea8414fd61df090f6aa60a3d78bfb4d8bd1c",
+                "reference": "5ef0ea8414fd61df090f6aa60a3d78bfb4d8bd1c",
                 "shasum": ""
             },
             "require": {
@@ -2746,7 +2486,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-09-03 09:45:27"
+            "time": "2014-09-28 16:24:47"
         },
         {
             "name": "tabernicola/jukecloud-bundle",
@@ -2755,12 +2495,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tabernicola/JukeCloudBundle.git",
-                "reference": "ee3ccd0aacfd255db40c7db5469be2b0b82a4235"
+                "reference": "6cc42e48357bd4678df886ea8601ed43a075f6fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tabernicola/JukeCloudBundle/zipball/ee3ccd0aacfd255db40c7db5469be2b0b82a4235",
-                "reference": "ee3ccd0aacfd255db40c7db5469be2b0b82a4235",
+                "url": "https://api.github.com/repos/tabernicola/JukeCloudBundle/zipball/6cc42e48357bd4678df886ea8601ed43a075f6fe",
+                "reference": "6cc42e48357bd4678df886ea8601ed43a075f6fe",
                 "shasum": ""
             },
             "require": {
@@ -2771,13 +2511,13 @@
                 "components/jquery": "1.*",
                 "components/jqueryui": "1.11.*",
                 "components/jqueryui-theme-bootstrap": "*",
+                "dandelionmood/lastfm": "*",
                 "doctrine/doctrine-fixtures-bundle": "2.2.*",
                 "echonest/echonest": "*",
                 "liip/imagine-bundle": "1.0.*",
                 "nass600/get-id3": "*",
                 "nass600/lyrics-bundle": "*",
                 "php": ">=5.3.2",
-                "ricbra/discogs-bundle": "~1.0.0",
                 "stof/doctrine-extensions-bundle": "1.1.*",
                 "symfony/framework-bundle": "~2.3"
             },
@@ -2806,7 +2546,7 @@
                 "player",
                 "playlist"
             ],
-            "time": "2014-09-21 19:00:55"
+            "time": "2014-10-08 18:56:03"
         },
         {
             "name": "twig/extensions",

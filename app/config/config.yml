@@ -77,6 +77,8 @@ ricbra_discogs:
     user_agent: "TabernicolaJukecloudBundle/0.1 +http://tabernicola.es"
 
 tabernicola_juke_cloud:
+    lastfm_apikey: %lastfm_apikey%
+    lastfm_secret: %lastfm_secret%
     plugins:
         info: [tabernicola_juke_cloud.plugins.init_info]
         playlist: [tabernicola_juke_cloud.plugins.local,tabernicola_juke_cloud.plugins.youtube]

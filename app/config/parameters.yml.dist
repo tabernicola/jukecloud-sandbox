@@ -18,5 +18,5 @@ parameters:
 
     youtube_api_key: "sdfsdgdfgd"
 
-    discogs_consumer_key: ""
-    discogs_consumer_secret: ""
+    lastfm_apikey: your_lastfm_apikey
+    lastfm_secret: your_lastfm_secret

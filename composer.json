@@ -19,13 +19,13 @@
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
-        "tabernicola/jukecloud-bundle": "dev-master",
+        "tabernicola/jukecloud-bundle": "@dev",
         "components/jqueryui-theme-bootstrap": "@dev",
         "components/jplayer": "@dev",
         "nass600/get-id3": "@dev",
         "nass600/lyrics-bundle": "@dev",
         "echonest/echonest": "@dev",
-        "madcoda/php-youtube-api" : "dev-master"                
+        "madcoda/php-youtube-api" : "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

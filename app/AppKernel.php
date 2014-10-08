@@ -18,7 +18,6 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Tabernicola\JukeCloudBundle\TabernicolaJukeCloudBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
-            new Ricbra\Bundle\DiscogsBundle\RicbraDiscogsBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),
         );
 
