@@ -1,0 +1,40 @@
+{% extends 'TabernicolaJukeCloudBundle::index.html.twig' %}
+
+{%block controls %}
+
+{% endblock %}
+
+{%block nav %}
+    <div id="left-panel" class="col-md-4 sidebar panel"></div>
+{% endblock %}
+
+
+{%block browser %}
+    <div id="center-panel" class="col-md-4 col-md-offset-4 main panel sidebar">
+        {% for type, messages in app.session.flashBag.all %}
+            {% for message in messages %}
+                <div class="row {{ type }}"><div class="col-md-12">
+                        {{ message|trans({}, 'FOSUserBundle') }}
+                    </div></div>
+                {% endfor %}
+            {% endfor %}
+
+        <div  class="row">
+            <div class="col-md-12 panel">
+                {% block fos_user_content %}
+                {% endblock fos_user_content %}
+            </div>
+        </div>            
+    </div>           
+{% endblock %}
+
+{%block playlist %}
+    <div id="right-panel" class="panel col-md-4 col-md-offset-8 sidebar"></div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{{ asset(components_folder ~ 'jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset(components_folder ~ 'bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset(components_folder ~ 'jquery-ui/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('bundles/tabernicolajukecloud/js/template.js')}}"></script>
+{% endblock %}

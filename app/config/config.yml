@@ -82,3 +82,8 @@ tabernicola_juke_cloud:
         library: ~
     youtube_plugin:
         apikey: %youtube_api_key%
+        
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: Tabernicola\JukeCloudUserBundle\Entity\User

@@ -1,0 +1,7 @@
+parameters:
+#    tabernicola_juke_cloud_user.example.class: Tabernicola\JukeCloudUserBundle\Example
+
+services:
+#    tabernicola_juke_cloud_user.example:
+#        class: %tabernicola_juke_cloud_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,9 @@
+Tabernicola\JukeCloudUserBundle\Entity\User:
+    type: entity
+    table: User
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }
