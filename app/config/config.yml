@@ -72,9 +72,6 @@ stof_doctrine_extensions:
         default:
             sluggable: true
             timestampable: true
-            
-ricbra_discogs:
-    user_agent: "TabernicolaJukecloudBundle/0.1 +http://tabernicola.es"
 
 tabernicola_juke_cloud:
     lastfm_apikey: %lastfm_apikey%
