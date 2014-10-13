@@ -2470,12 +2470,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tabernicola/JukeCloudBundle.git",
-                "reference": "2393cbe42b86f290903bd9f5bcef1f54d51b2a57"
+                "reference": "4e88d07487092ed707e90cf82a5d362d87ede2c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tabernicola/JukeCloudBundle/zipball/2393cbe42b86f290903bd9f5bcef1f54d51b2a57",
-                "reference": "2393cbe42b86f290903bd9f5bcef1f54d51b2a57",
+                "url": "https://api.github.com/repos/tabernicola/JukeCloudBundle/zipball/4e88d07487092ed707e90cf82a5d362d87ede2c3",
+                "reference": "4e88d07487092ed707e90cf82a5d362d87ede2c3",
                 "shasum": ""
             },
             "require": {
@@ -2520,7 +2520,7 @@
                 "player",
                 "playlist"
             ],
-            "time": "2014-10-12 10:57:18"
+            "time": "2014-10-13 18:11:31"
         },
         {
             "name": "twig/extensions",
