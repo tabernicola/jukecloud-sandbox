@@ -14,7 +14,7 @@ framework:
     validation:      { enable_annotations: true }
     templating:
         engines: ['twig']
-        assets_version: 1
+        assets_version: 2
         assets_version_format: %%s?v=%%s
         #assets_version: SomeVersionScheme
     default_locale:  "%locale%"
@@ -79,7 +79,7 @@ tabernicola_juke_cloud:
     lastfm_apikey: %lastfm_apikey%
     lastfm_secret: %lastfm_secret%
     plugins:
-        info: [tabernicola_juke_cloud.plugins.init_info]
+        info: [tabernicola_juke_cloud.plugins.news,tabernicola_juke_cloud.plugins.init_info]
         playlist: [tabernicola_juke_cloud.plugins.local,tabernicola_juke_cloud.plugins.youtube]
         library: ~
     youtube_plugin:

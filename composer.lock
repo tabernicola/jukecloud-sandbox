@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "59183ad826acedc6a8eac2312b3ccfc4",
+    "hash": "f3559908082e15c3925bf598fc727321",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -513,16 +513,16 @@
         },
         {
             "name": "dandelionmood/lastfm",
-            "version": "v0.3",
+            "version": "v0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dandelionmood/php-lastfm.git",
-                "reference": "6d5ccb8139c470da5fa7d93f1a6f6b9969ded6e4"
+                "reference": "36497a5248bc427a2584c484ca6e44921a4a8022"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dandelionmood/php-lastfm/zipball/6d5ccb8139c470da5fa7d93f1a6f6b9969ded6e4",
-                "reference": "6d5ccb8139c470da5fa7d93f1a6f6b9969ded6e4",
+                "url": "https://api.github.com/repos/dandelionmood/php-lastfm/zipball/36497a5248bc427a2584c484ca6e44921a4a8022",
+                "reference": "36497a5248bc427a2584c484ca6e44921a4a8022",
                 "shasum": ""
             },
             "require": {
@@ -560,7 +560,7 @@
                 "last.fm",
                 "wrapper"
             ],
-            "time": "2014-08-23 20:16:32"
+            "time": "2014-10-19 16:28:16"
         },
         {
             "name": "doctrine/annotations",
@@ -1830,17 +1830,17 @@
         },
         {
             "name": "liip/imagine-bundle",
-            "version": "1.0.6",
+            "version": "1.0.7",
             "target-dir": "Liip/ImagineBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/liip/LiipImagineBundle.git",
-                "reference": "017bd4509091fc69727273164e3d16ea071e52a5"
+                "reference": "7d0e79706bbae63e09587d592bb96e7f5d9e43bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/017bd4509091fc69727273164e3d16ea071e52a5",
-                "reference": "017bd4509091fc69727273164e3d16ea071e52a5",
+                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/7d0e79706bbae63e09587d592bb96e7f5d9e43bd",
+                "reference": "7d0e79706bbae63e09587d592bb96e7f5d9e43bd",
                 "shasum": ""
             },
             "require": {
@@ -1858,7 +1858,7 @@
                 "doctrine/mongodb-odm": "1.0.*",
                 "doctrine/orm": "~2.3",
                 "ext-gd": "*",
-                "phpunit/phpunit": "~3.7",
+                "phpunit/phpunit": "~4.3",
                 "psr/log": "~1.0",
                 "symfony/browser-kit": "~2.3",
                 "symfony/console": "~2.3",
@@ -1900,7 +1900,7 @@
                 "image",
                 "imagine"
             ],
-            "time": "2014-09-17 09:53:36"
+            "time": "2014-10-18 17:48:27"
         },
         {
             "name": "madcoda/php-youtube-api",
@@ -2806,17 +2806,17 @@
         },
         {
             "name": "tabernicola/jukecloud-bundle",
-            "version": "dev-master",
+            "version": "v1.1",
             "target-dir": "Tabernicola/JukeCloudBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tabernicola/JukeCloudBundle.git",
-                "reference": "7f0cf9a490ed871badadd225a3e4bf22c8e09df6"
+                "reference": "9e477681f91058f989619646917d62dd1e00fe31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tabernicola/JukeCloudBundle/zipball/7f0cf9a490ed871badadd225a3e4bf22c8e09df6",
-                "reference": "7f0cf9a490ed871badadd225a3e4bf22c8e09df6",
+                "url": "https://api.github.com/repos/tabernicola/JukeCloudBundle/zipball/9e477681f91058f989619646917d62dd1e00fe31",
+                "reference": "9e477681f91058f989619646917d62dd1e00fe31",
                 "shasum": ""
             },
             "require": {
@@ -2861,7 +2861,7 @@
                 "player",
                 "playlist"
             ],
-            "time": "2014-10-19 10:05:21"
+            "time": "2014-10-19 18:24:30"
         },
         {
             "name": "twig/extensions",
