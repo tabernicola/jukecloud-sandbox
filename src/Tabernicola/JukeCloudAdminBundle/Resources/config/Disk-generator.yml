@@ -1,0 +1,37 @@
+generator: admingenerator.generator.doctrine
+params:
+    model: Tabernicola\JukeCloudBundle\Entity\Disk
+    namespace_prefix: Tabernicola
+    concurrency_lock: ~
+    bundle_name: JukeCloudAdminBundle
+    pk_requirement: ~
+    fields: ~
+    object_actions:
+        delete: ~
+    batch_actions:
+        delete: ~
+builders:
+    list:
+        params:
+            title: Discos
+            display: [id, title,slug,updated]
+            sort: [updated, DESC]
+            object_actions:
+                edit: ~
+                delete: ~
+    filters:
+        params:
+            display: [id, title]
+    edit:
+        params:
+            title: Editar disco
+            display: ~
+            actions:
+                save: ~
+                list: ~
+    actions:
+        params:
+            object_actions:
+                delete: ~
+            batch_actions:
+                delete: ~

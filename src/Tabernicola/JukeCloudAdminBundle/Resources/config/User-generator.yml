@@ -1,0 +1,45 @@
+generator: admingenerator.generator.doctrine
+params:
+    model: Tabernicola\JukeCloudUserBundle\Entity\User
+    namespace_prefix: Tabernicola
+    concurrency_lock: ~
+    bundle_name: JukeCloudAdminBundle
+    pk_requirement: ~
+    fields: ~
+    object_actions:
+        delete: ~
+    batch_actions:
+        delete: ~
+builders:
+    list:
+        params:
+            title: Usuarios
+            display: [id, username, email, locked, roles]
+            actions:
+                new: ~
+            object_actions:
+                edit: ~
+                delete: ~
+    filters:
+        params:
+            display: [id, username, email, locked, roles]
+    new:
+        params:
+            title: Nuevo usuario
+            display: [ username, password, email, roles]
+            actions:
+                save: ~
+                list: ~
+    edit:
+        params:
+            title: Editar usuario
+            display: [ username, email, locked, roles]
+            actions:
+                save: ~
+                list: ~
+    actions:
+        params:
+            object_actions:
+                delete: ~
+            batch_actions:
+                delete: ~

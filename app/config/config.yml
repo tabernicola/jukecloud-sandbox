@@ -87,3 +87,11 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: Tabernicola\JukeCloudUserBundle\Entity\User
+ 
+admingenerator_generator:
+    use_doctrine_orm: true
+    base_admin_template: AdmingeneratorGeneratorBundle::base_admin_assetic_less.html.twig
+    dashboard_welcome_path: tabernicola_juke_cloud_admin_home
+    base_admin_template:    TabernicolaJukeCloudAdminBundle:admin:index.html.twig
+    login_path: fos_user_security_login
+    logout_path: fos_user_security_logout

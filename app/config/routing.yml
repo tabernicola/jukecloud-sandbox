@@ -5,3 +5,8 @@ tabernicola_juke_cloud:
 tabernicola_juke_cloud_user:
     resource: "@TabernicolaJukeCloudUserBundle/Resources/config/routing.yml"
     prefix:   /user
+    
+tabernicola_juke_cloud_admin:
+    resource: "@TabernicolaJukeCloudAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+

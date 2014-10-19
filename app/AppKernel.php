@@ -17,10 +17,19 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Tabernicola\JukeCloudBundle\TabernicolaJukeCloudBundle(),
-            new Tabernicola\JukeCloudUserBundle\TabernicolaJukeCloudUserBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),
-            new FOS\UserBundle\FOSUserBundle(),            
+            
+            //jcuserbundle
+            new FOS\UserBundle\FOSUserBundle(),
+            new Tabernicola\JukeCloudUserBundle\TabernicolaJukeCloudUserBundle(),
+            
+            //jcadminbundle
+            new Admingenerator\GeneratorBundle\AdmingeneratorGeneratorBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+            new Tabernicola\JukeCloudAdminBundle\TabernicolaJukeCloudAdminBundle(),
+            
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

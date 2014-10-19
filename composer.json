@@ -24,7 +24,9 @@
         "components/jplayer": "dev-master",
         "madcoda/php-youtube-api" : "dev-master",
         "components/jqueryui-theme-bootstrap": "dev-master",
-        "friendsofsymfony/user-bundle": "dev-master"
+        "friendsofsymfony/user-bundle": "~1.3",
+        "cedriclombardot/admingenerator-generator-bundle": "1.1.3"
+        
     },
     "scripts": {
         "post-install-cmd": [

@@ -1,0 +1,37 @@
+generator: admingenerator.generator.doctrine
+params:
+    model: Tabernicola\JukeCloudBundle\Entity\Song
+    namespace_prefix: Tabernicola
+    concurrency_lock: ~
+    bundle_name: JukeCloudAdminBundle
+    pk_requirement: ~
+    fields: ~
+    object_actions:
+        delete: ~
+    batch_actions:
+        delete: ~
+builders:
+    list:
+        params:
+            title: Canciones
+            display: [id, title, disk, artist, number, created,updated,type]
+            sort: [ updated, DESC ]
+            object_actions:
+                edit: ~
+                delete: ~
+    filters:
+        params:
+            display: [id, title, path, type]
+    edit:
+        params:
+            title: "Editar cancion"
+            display: [title, path,number, type]
+            actions:
+                save: ~
+                list: ~
+    actions:
+        params:
+            object_actions:
+                delete: ~
+            batch_actions:
+                delete: ~

@@ -4,8 +4,42 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ab1ae18dc691ac337dc4fced49266ad8",
+    "hash": "59183ad826acedc6a8eac2312b3ccfc4",
     "packages": [
+        {
+            "name": "afarkas/html5shiv",
+            "version": "3.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aFarkas/html5shiv.git",
+                "reference": "40df868a76f1f19ea23b123d1480d44a7195f349"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aFarkas/html5shiv/zipball/40df868a76f1f19ea23b123d1480d44a7195f349",
+                "reference": "40df868a76f1f19ea23b123d1480d44a7195f349",
+                "shasum": ""
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "dist/html5shiv.js"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "GPL-2.0"
+            ],
+            "description": "Defacto way to enable use of HTML5 sectioning elements in legacy Internet Explorer.",
+            "homepage": "http://paulirish.com/2011/the-history-of-the-html5-shiv/",
+            "time": "2014-05-03 10:11:35"
+        },
         {
             "name": "blueimp/jquery-file-upload",
             "version": "9.7.2",
@@ -55,6 +89,126 @@
                 "widget"
             ],
             "time": "2014-09-21 17:28:52"
+        },
+        {
+            "name": "cedriclombardot/admingenerator-generator-bundle",
+            "version": "v1.1.3",
+            "target-dir": "Admingenerator/GeneratorBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony2admingenerator/AdmingeneratorGeneratorBundle.git",
+                "reference": "926d003898cb47b039b93d9f90ff7f167b15cf3b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony2admingenerator/AdmingeneratorGeneratorBundle/zipball/926d003898cb47b039b93d9f90ff7f167b15cf3b",
+                "reference": "926d003898cb47b039b93d9f90ff7f167b15cf3b",
+                "shasum": ""
+            },
+            "require": {
+                "afarkas/html5shiv": ">= 3.7.0",
+                "cedriclombardot/twig-generator": "1.0.*",
+                "components/bootstrap": "~3.0",
+                "components/font-awesome": "~4.0",
+                "components/jquery": ">= 1.9.0, < 2.0.0",
+                "components/jqueryui": ">= 1.9.0",
+                "knplabs/knp-menu-bundle": ">1.0,<2.1",
+                "robloach/component-installer": ">= 0.0.11",
+                "sensio/generator-bundle": ">= 2.3.3",
+                "symfony/symfony": ">= 2.2.0",
+                "twig/extensions": "1.0.*",
+                "twig/twig": ">= 1.9.0",
+                "white-october/pagerfanta-bundle": "1.0.*@dev"
+            },
+            "require-dev": {
+                "doctrine/common": ">=2.2.3,<2.5-dev",
+                "doctrine/dbal": ">=2.2.3,<2.5-dev",
+                "doctrine/orm": ">=2.2.3,<2.5-dev"
+            },
+            "suggest": {
+                "avocode/form-extensions-bundle": "Symfony2 form extensions for Admingenerator",
+                "cedriclombardot/admingenerator-user-bundle": "FOSUserBundle integration for Admingenerator",
+                "jms/security-extra-bundle": "Allows expressions in credential checks for generated actions",
+                "liuggio/excelbundle": "(version >= 2.0) Allows the usage of the Excel export."
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Admingenerator\\GeneratorBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cedric LOMBARDOT",
+                    "email": "cedric.lombardot@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://github.com/cedriclombardot/AdmingeneratorGeneratorBundle/contributors"
+                }
+            ],
+            "description": "Admingenerator for Symfony2 based on YAML configuration and Twig templating",
+            "homepage": "http://symfony2admingenerator.org/",
+            "keywords": [
+                "admin",
+                "generator",
+                "yaml"
+            ],
+            "time": "2014-07-17 20:53:25"
+        },
+        {
+            "name": "cedriclombardot/twig-generator",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cedriclombardot/TwigGenerator.git",
+                "reference": "b4a846956d330ed464070f6276801d16c92ae5c5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cedriclombardot/TwigGenerator/zipball/b4a846956d330ed464070f6276801d16c92ae5c5",
+                "reference": "b4a846956d330ed464070f6276801d16c92ae5c5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "twig/twig": ">=1.1, <2.0-dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "TwigGenerator": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cedric LOMBARDOT",
+                    "email": "cedric.lombardot@gmail.com"
+                },
+                {
+                    "name": "François Zaninotto"
+                }
+            ],
+            "description": "A generator for PHP code based on Twig template engine",
+            "keywords": [
+                "code generation",
+                "generator",
+                "twig"
+            ],
+            "time": "2012-11-09 23:18:09"
         },
         {
             "name": "components/bootstrap",
@@ -236,20 +390,20 @@
         },
         {
             "name": "components/jqueryui",
-            "version": "1.11.1",
+            "version": "1.11.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/jqueryui.git",
-                "reference": "39890e8599bdd79c423ea21b967195106800b87d"
+                "reference": "396781474d936959061271505f506b78398fe6a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/components/jqueryui/zipball/39890e8599bdd79c423ea21b967195106800b87d",
-                "reference": "39890e8599bdd79c423ea21b967195106800b87d",
+                "url": "https://api.github.com/repos/components/jqueryui/zipball/396781474d936959061271505f506b78398fe6a2",
+                "reference": "396781474d936959061271505f506b78398fe6a2",
                 "shasum": ""
             },
             "require": {
-                "components/jquery": ">=1.8"
+                "components/jquery": ">=1.6"
             },
             "type": "component",
             "extra": {
@@ -309,10 +463,15 @@
                     "name": "Corey Frang",
                     "email": "gnarf37@gmail.com",
                     "homepage": "http://gnarf.net"
+                },
+                {
+                    "name": "Felix Nagel",
+                    "email": "info@felixnagel.com",
+                    "homepage": "http://www.felixnagel.com"
                 }
             ],
             "description": "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.",
-            "time": "2014-08-13 21:01:50"
+            "time": "2014-10-17 06:40:12"
         },
         {
             "name": "components/jqueryui-theme-bootstrap",
@@ -595,7 +754,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -671,7 +830,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -744,16 +903,16 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "v2.4.2",
+            "version": "v2.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "fec965d330c958e175c39e61c3f6751955af32d0"
+                "reference": "0368bc031976126e5d36d37d2c56155092b6575b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/fec965d330c958e175c39e61c3f6751955af32d0",
-                "reference": "fec965d330c958e175c39e61c3f6751955af32d0",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/0368bc031976126e5d36d37d2c56155092b6575b",
+                "reference": "0368bc031976126e5d36d37d2c56155092b6575b",
                 "shasum": ""
             },
             "require": {
@@ -765,7 +924,7 @@
                 "symfony/console": "~2.0"
             },
             "suggest": {
-                "symfony/console": "Allows use of the command line interface"
+                "symfony/console": "For helpful console commands such as SQL execution and import of files."
             },
             "type": "library",
             "autoload": {
@@ -779,23 +938,20 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/",
-                    "role": "Creator"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com",
-                    "homepage": "http://www.instaclick.com"
-                },
-                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
                     "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
                 }
             ],
             "description": "Database Abstraction Layer",
@@ -806,7 +962,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2014-01-01 16:43:57"
+            "time": "2014-10-16 11:56:49"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -990,7 +1146,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -1044,7 +1200,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -1131,30 +1287,30 @@
         },
         {
             "name": "friendsofsymfony/user-bundle",
-            "version": "dev-master",
+            "version": "v1.3.5",
+            "target-dir": "FOS/UserBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
-                "reference": "cac56e025c1d2d1fe5acb644e4cafe0830f17150"
+                "reference": "d66890ad3489e18be153502c5ccc3f2bf5cce442"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/cac56e025c1d2d1fe5acb644e4cafe0830f17150",
-                "reference": "cac56e025c1d2d1fe5acb644e4cafe0830f17150",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/d66890ad3489e18be153502c5ccc3f2bf5cce442",
+                "reference": "d66890ad3489e18be153502c5ccc3f2bf5cce442",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
-                "symfony/form": "~2.3",
-                "symfony/framework-bundle": "~2.3",
-                "symfony/security-bundle": "~2.3",
-                "symfony/twig-bundle": "~2.3"
+                "symfony/framework-bundle": "~2.1",
+                "symfony/security-bundle": "~2.1"
             },
             "require-dev": {
                 "doctrine/doctrine-bundle": "*",
-                "swiftmailer/swiftmailer": ">=4.3, <6.0",
-                "symfony/validator": "~2.3",
-                "symfony/yaml": "~2.3",
+                "swiftmailer/swiftmailer": "~4.3",
+                "symfony/validator": "~2.1",
+                "symfony/yaml": "~2.1",
+                "twig/twig": "~1.5",
                 "willdurand/propel-typehintable-behavior": "dev-master"
             },
             "suggest": {
@@ -1167,8 +1323,8 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "FOS\\UserBundle\\": ""
+                "psr-0": {
+                    "FOS\\UserBundle": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1194,7 +1350,7 @@
             "keywords": [
                 "User management"
             ],
-            "time": "2014-10-10 08:00:05"
+            "time": "2014-09-04 12:28:43"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -1436,6 +1592,124 @@
             "time": "2014-01-12 16:20:24"
         },
         {
+            "name": "knplabs/knp-menu",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/KnpMenu.git",
+                "reference": "5758d0026d7ed00c8dd4727e413918cf2dc74c1a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/5758d0026d7ed00c8dd4727e413918cf2dc74c1a",
+                "reference": "5758d0026d7ed00c8dd4727e413918cf2dc74c1a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "pimple/pimple": "1.0.*",
+                "silex/silex": "1.0.*",
+                "twig/twig": ">=1.2,<2.0-dev"
+            },
+            "suggest": {
+                "pimple/pimple": "for the built-in implementations of the menu provider and renderer provider",
+                "silex/silex": "for the integration with your silex application",
+                "twig/twig": "for the TwigRenderer and the integration with your templates"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Knp\\Menu\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                },
+                {
+                    "name": "Knplabs",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://github.com/KnpLabs/KnpMenu/contributors"
+                }
+            ],
+            "description": "An object oriented menu library",
+            "homepage": "http://knplabs.com",
+            "keywords": [
+                "menu",
+                "tree"
+            ],
+            "time": "2014-08-01 09:50:16"
+        },
+        {
+            "name": "knplabs/knp-menu-bundle",
+            "version": "v2.0.0",
+            "target-dir": "Knp/Bundle/MenuBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/KnpMenuBundle.git",
+                "reference": "bdfc95da5ff7e4e67f948aaa9ea5da835a3a9088"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/bdfc95da5ff7e4e67f948aaa9ea5da835a3a9088",
+                "reference": "bdfc95da5ff7e4e67f948aaa9ea5da835a3a9088",
+                "shasum": ""
+            },
+            "require": {
+                "knplabs/knp-menu": "~2.0",
+                "symfony/framework-bundle": "~2.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Knp\\Bundle\\MenuBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                },
+                {
+                    "name": "Knplabs",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://github.com/KnpLabs/KnpMenuBundle/contributors"
+                }
+            ],
+            "description": "This bundle provides an integration of the KnpMenu library",
+            "keywords": [
+                "menu"
+            ],
+            "time": "2014-08-01 09:57:23"
+        },
+        {
             "name": "kriswallsmith/assetic",
             "version": "v1.1.2",
             "source": {
@@ -1634,12 +1908,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/madcoda/php-youtube-api.git",
-                "reference": "9d9200fa983225b2d99f0241f2566de6cfb06bb0"
+                "reference": "dd009e9e2d8463ef75adb0f5861db67ddf89cc84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/madcoda/php-youtube-api/zipball/9d9200fa983225b2d99f0241f2566de6cfb06bb0",
-                "reference": "9d9200fa983225b2d99f0241f2566de6cfb06bb0",
+                "url": "https://api.github.com/repos/madcoda/php-youtube-api/zipball/dd009e9e2d8463ef75adb0f5861db67ddf89cc84",
+                "reference": "dd009e9e2d8463ef75adb0f5861db67ddf89cc84",
                 "shasum": ""
             },
             "require": {
@@ -1671,7 +1945,7 @@
                 "video",
                 "youtube"
             ],
-            "time": "2014-09-07 14:15:21"
+            "time": "2014-10-14 11:36:38"
         },
         {
             "name": "monolog/monolog",
@@ -1786,6 +2060,73 @@
                 "mp3"
             ],
             "time": "2013-10-06 22:25:34"
+        },
+        {
+            "name": "pagerfanta/pagerfanta",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/whiteoctober/Pagerfanta.git",
+                "reference": "ac1edfdf81c91a0f1471769071011ebf9b055421"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/whiteoctober/Pagerfanta/zipball/ac1edfdf81c91a0f1471769071011ebf9b055421",
+                "reference": "ac1edfdf81c91a0f1471769071011ebf9b055421",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "doctrine/mongodb-odm": "1.0.*@dev",
+                "doctrine/orm": "2.3.*",
+                "doctrine/phpcr-odm": "1.*",
+                "jackalope/jackalope-doctrine-dbal": "1.*",
+                "jmikola/geojson": "1.0.*",
+                "mandango/mandango": "1.0.*@dev",
+                "phpunit/phpunit": "3.7.*",
+                "propel/propel1": "~1.6",
+                "solarium/solarium": "3.1.*"
+            },
+            "suggest": {
+                "doctrine/mongodb-odm": "To use the DoctrineODMMongoDBAdapter.",
+                "doctrine/orm": "To use the DoctrineORMAdapter.",
+                "doctrine/phpcr-odm": "To use the DoctrineODMPhpcrAdapter. >= 1.1.0",
+                "mandango/mandango": "To use the MandangoAdapter.",
+                "propel/propel1": "To use the PropelAdapter",
+                "solarium/solarium": "To use the SolariumAdapter."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Pagerfanta\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pablo Díez",
+                    "email": "pablodip@gmail.com",
+                    "homepage": "http://github.com/pablodip"
+                }
+            ],
+            "description": "Pagination for PHP 5.3",
+            "keywords": [
+                "page",
+                "pagination",
+                "paginator",
+                "paging"
+            ],
+            "time": "2014-06-02 09:21:14"
         },
         {
             "name": "psr/log",
@@ -2130,21 +2471,21 @@
         },
         {
             "name": "symfony/assetic-bundle",
-            "version": "v2.3.0",
+            "version": "v2.3.1",
             "target-dir": "Symfony/Bundle/AsseticBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/AsseticBundle.git",
-                "reference": "146dd3cb46b302bd471560471c6aaa930483dac1"
+                "reference": "099e0bb5d80e7039af20db384a41017fde521f21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/AsseticBundle/zipball/146dd3cb46b302bd471560471c6aaa930483dac1",
-                "reference": "146dd3cb46b302bd471560471c6aaa930483dac1",
+                "url": "https://api.github.com/repos/symfony/AsseticBundle/zipball/099e0bb5d80e7039af20db384a41017fde521f21",
+                "reference": "099e0bb5d80e7039af20db384a41017fde521f21",
                 "shasum": ""
             },
             "require": {
-                "kriswallsmith/assetic": "~1.1",
+                "kriswallsmith/assetic": "1.1.x",
                 "php": ">=5.3.0",
                 "symfony/framework-bundle": "~2.1"
             },
@@ -2163,7 +2504,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1.x-dev"
+                    "dev-master": "2.3-dev"
                 }
             },
             "autoload": {
@@ -2189,7 +2530,7 @@
                 "compression",
                 "minification"
             ],
-            "time": "2013-05-16 05:32:23"
+            "time": "2013-11-25 16:34:50"
         },
         {
             "name": "symfony/icu",
@@ -2470,12 +2811,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tabernicola/JukeCloudBundle.git",
-                "reference": "4e88d07487092ed707e90cf82a5d362d87ede2c3"
+                "reference": "59d31b67e237c3c4de1fedd5129ad7d72239de5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tabernicola/JukeCloudBundle/zipball/4e88d07487092ed707e90cf82a5d362d87ede2c3",
-                "reference": "4e88d07487092ed707e90cf82a5d362d87ede2c3",
+                "url": "https://api.github.com/repos/tabernicola/JukeCloudBundle/zipball/59d31b67e237c3c4de1fedd5129ad7d72239de5d",
+                "reference": "59d31b67e237c3c4de1fedd5129ad7d72239de5d",
                 "shasum": ""
             },
             "require": {
@@ -2520,7 +2861,7 @@
                 "player",
                 "playlist"
             ],
-            "time": "2014-10-13 18:11:31"
+            "time": "2014-10-18 08:51:38"
         },
         {
             "name": "twig/extensions",
@@ -2573,16 +2914,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.16.1",
+            "version": "v1.16.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "7c4c01dcf578523cfcddf383641a4f12790270ec"
+                "reference": "42f758d9fe2146d1f0470604fc05ee43580873fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/7c4c01dcf578523cfcddf383641a4f12790270ec",
-                "reference": "7c4c01dcf578523cfcddf383641a4f12790270ec",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/42f758d9fe2146d1f0470604fc05ee43580873fc",
+                "reference": "42f758d9fe2146d1f0470604fc05ee43580873fc",
                 "shasum": ""
             },
             "require": {
@@ -2626,7 +2967,61 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2014-10-10 14:09:53"
+            "time": "2014-10-17 12:53:44"
+        },
+        {
+            "name": "white-october/pagerfanta-bundle",
+            "version": "v1.0.2",
+            "target-dir": "WhiteOctober/PagerfantaBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/whiteoctober/WhiteOctoberPagerfantaBundle.git",
+                "reference": "10403c1db34983f81d8c106cd1c47f3139641455"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/whiteoctober/WhiteOctoberPagerfantaBundle/zipball/10403c1db34983f81d8c106cd1c47f3139641455",
+                "reference": "10403c1db34983f81d8c106cd1c47f3139641455",
+                "shasum": ""
+            },
+            "require": {
+                "pagerfanta/pagerfanta": "1.0.*",
+                "symfony/framework-bundle": "~2.2",
+                "symfony/property-access": "~2.2",
+                "symfony/twig-bundle": "~2.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7",
+                "symfony/symfony": "~2.2"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "WhiteOctober\\PagerfantaBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pablo Díez",
+                    "email": "pablodip@gmail.com",
+                    "homepage": "http://github.com/pablodip"
+                }
+            ],
+            "description": "Bundle to use Pagerfanta with Symfony2",
+            "keywords": [
+                "page",
+                "paging"
+            ],
+            "time": "2014-01-07 13:33:53"
         }
     ],
     "packages-dev": [],
@@ -2637,8 +3032,7 @@
         "nass600/get-id3": 20,
         "components/jplayer": 20,
         "madcoda/php-youtube-api": 20,
-        "components/jqueryui-theme-bootstrap": 20,
-        "friendsofsymfony/user-bundle": 20
+        "components/jqueryui-theme-bootstrap": 20
     },
     "prefer-stable": false,
     "platform": {

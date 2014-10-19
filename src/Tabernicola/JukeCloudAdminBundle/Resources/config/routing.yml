@@ -1,0 +1,23 @@
+tabernicola_juke_cloud_admin_home:
+    path:     /
+    defaults: { _controller: TabernicolaJukeCloudAdminBundle:Default:index }
+
+tabernicola_juke_cloud_admin_Song:
+    resource: "@TabernicolaJukeCloudAdminBundle/Controller/Song/"
+    type:     admingenerator
+    prefix:   /song
+
+tabernicola_juke_cloud_admin_Disk:
+    resource: "@TabernicolaJukeCloudAdminBundle/Controller/Disk/"
+    type:     admingenerator
+    prefix:   /disk
+    
+tabernicola_juke_cloud_admin_Artist:
+    resource: "@TabernicolaJukeCloudAdminBundle/Controller/Artist/"
+    type:     admingenerator
+    prefix:   /artist
+
+tabernicola_juke_cloud_admin_User:
+    resource: "@TabernicolaJukeCloudAdminBundle/Controller/User/"
+    type:     admingenerator
+    prefix:   /user
