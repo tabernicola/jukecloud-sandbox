@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Tabernicola\JukeCloudBundle\TabernicolaJukeCloudBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),
+            new Liip\ThemeBundle\LiipThemeBundle(),
             
             //jcuserbundle
             new FOS\UserBundle\FOSUserBundle(),

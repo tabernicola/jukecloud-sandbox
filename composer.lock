@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f3559908082e15c3925bf598fc727321",
+    "hash": "d5842d8664b93297b99c2c1ad95acb6d",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -1903,6 +1903,60 @@
             "time": "2014-10-22 06:27:33"
         },
         {
+            "name": "liip/theme-bundle",
+            "version": "dev-master",
+            "target-dir": "Liip/ThemeBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/liip/LiipThemeBundle.git",
+                "reference": "3a4dbf2da9c9e3edd8c1d858ba2c7b22e6123334"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/liip/LiipThemeBundle/zipball/3a4dbf2da9c9e3edd8c1d858ba2c7b22e6123334",
+                "reference": "3a4dbf2da9c9e3edd8c1d858ba2c7b22e6123334",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/framework-bundle": "~2.0"
+            },
+            "require-dev": {
+                "symfony/console": "~2.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Liip\\ThemeBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Community contributions",
+                    "homepage": "https://github.com/liip/LiipThemeBundle/contributors"
+                },
+                {
+                    "name": "Liip AG",
+                    "homepage": "http://www.liip.ch/"
+                }
+            ],
+            "description": "Provides theming support for #Symfony2 Bundles",
+            "keywords": [
+                "themes",
+                "theming"
+            ],
+            "time": "2014-09-26 13:32:08"
+        },
+        {
             "name": "madcoda/php-youtube-api",
             "version": "dev-master",
             "source": {
@@ -2758,17 +2812,17 @@
         },
         {
             "name": "tabernicola/jukecloud-bundle",
-            "version": "v1.1",
+            "version": "v1.1.2",
             "target-dir": "Tabernicola/JukeCloudBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tabernicola/JukeCloudBundle.git",
-                "reference": "9e477681f91058f989619646917d62dd1e00fe31"
+                "reference": "083e458a4a3da054bb3a83d27757160063fab8f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tabernicola/JukeCloudBundle/zipball/9e477681f91058f989619646917d62dd1e00fe31",
-                "reference": "9e477681f91058f989619646917d62dd1e00fe31",
+                "url": "https://api.github.com/repos/tabernicola/JukeCloudBundle/zipball/083e458a4a3da054bb3a83d27757160063fab8f3",
+                "reference": "083e458a4a3da054bb3a83d27757160063fab8f3",
                 "shasum": ""
             },
             "require": {
@@ -2813,7 +2867,7 @@
                 "player",
                 "playlist"
             ],
-            "time": "2014-10-19 18:24:30"
+            "time": "2014-11-01 10:48:01"
         },
         {
             "name": "twig/extensions",
@@ -2984,7 +3038,8 @@
         "nass600/get-id3": 20,
         "components/jplayer": 20,
         "madcoda/php-youtube-api": 20,
-        "components/jqueryui-theme-bootstrap": 20
+        "components/jqueryui-theme-bootstrap": 20,
+        "liip/theme-bundle": 20
     },
     "prefer-stable": false,
     "platform": {
