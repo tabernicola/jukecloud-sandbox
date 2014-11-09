@@ -14,7 +14,7 @@ builders:
     list:
         params:
             title: Canciones
-            display: [id, title, disk, artist, number, created,updated,type]
+            display: [id, title, disk, artist, number, created,updated,type, playTimes]
             sort: [ updated, DESC ]
             object_actions:
                 edit: ~

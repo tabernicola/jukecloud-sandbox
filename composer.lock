@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d822eabc6ac14d88dbf2aeb62f809536",
+    "hash": "b045e65250ecfc8fd29c5127473a2588",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -306,42 +306,6 @@
             ],
             "description": "The iconic font designed for use with Twitter Bootstrap.",
             "time": "2014-05-25 18:55:16"
-        },
-        {
-            "name": "components/jplayer",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tubssp/jPlayer.git",
-                "reference": "2b11083b5b6e817f88cbb0104b0cd9eb0c47c39d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tubssp/jPlayer/zipball/2b11083b5b6e817f88cbb0104b0cd9eb0c47c39d",
-                "reference": "2b11083b5b6e817f88cbb0104b0cd9eb0c47c39d",
-                "shasum": ""
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "name": "jplayer",
-                    "files": [
-                        "add-on/**",
-                        "jquery.jplayer/**",
-                        "popcorn/**",
-                        "skin/**"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Andreas Lemke",
-                    "email": "andreas.lemke@tu-braunschweig.de"
-                }
-            ],
-            "description": "The jQuery HTML5 Audio / Video Library",
-            "time": "2014-06-13 11:49:42"
         },
         {
             "name": "components/jquery",
@@ -1433,6 +1397,36 @@
             "time": "2014-01-12 16:34:06"
         },
         {
+            "name": "happyworm/jPlayer",
+            "version": "v2.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tabernicola/jPlayer.git",
+                "reference": "966da280e06ae36fb7114d5a500fb626e20a3c55"
+            },
+            "require": {
+                "components/jquery": ">=1.9",
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "jquery.jplayer/jquery.jplayer.js"
+                    ],
+                    "files": [
+                        "jquery.jplayer/Jplayer.swf",
+                        "add-on/*.js",
+                        "popcorn/player/*.js",
+                        "skin/blue.monday/*",
+                        "skin/pink.flag/*"
+                    ]
+                }
+            },
+            "description": "jPlayer.",
+            "time": "2014-11-08 11:19:11"
+        },
+        {
             "name": "imagine/imagine",
             "version": "v0.6.1",
             "source": {
@@ -2079,18 +2073,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nass600/getID3.git",
-                "reference": "36e82c89e5c7d6e534e1e852ae5a3320a214e25c"
+                "reference": "4012fa3d592f499a6ed192190291d585c12188d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nass600/getID3/zipball/36e82c89e5c7d6e534e1e852ae5a3320a214e25c",
-                "reference": "36e82c89e5c7d6e534e1e852ae5a3320a214e25c",
+                "url": "https://api.github.com/repos/nass600/getID3/zipball/4012fa3d592f499a6ed192190291d585c12188d2",
+                "reference": "4012fa3d592f499a6ed192190291d585c12188d2",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
             "type": "php-library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "files": [
                     "getid3/getid3.php",
@@ -2113,7 +2112,7 @@
                 "metadata",
                 "mp3"
             ],
-            "time": "2013-10-06 22:25:34"
+            "time": "2014-11-04 11:40:12"
         },
         {
             "name": "pagerfanta/pagerfanta",
@@ -2812,29 +2811,29 @@
         },
         {
             "name": "tabernicola/jukecloud-bundle",
-            "version": "v1.1.4",
+            "version": "v1.1.5",
             "target-dir": "Tabernicola/JukeCloudBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tabernicola/JukeCloudBundle.git",
-                "reference": "834faa54a22d913f64d6d0555dcee63256b37cb0"
+                "reference": "ebdaa733f2ec09204b74fc0cb257a91671d440d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tabernicola/JukeCloudBundle/zipball/834faa54a22d913f64d6d0555dcee63256b37cb0",
-                "reference": "834faa54a22d913f64d6d0555dcee63256b37cb0",
+                "url": "https://api.github.com/repos/tabernicola/JukeCloudBundle/zipball/ebdaa733f2ec09204b74fc0cb257a91671d440d7",
+                "reference": "ebdaa733f2ec09204b74fc0cb257a91671d440d7",
                 "shasum": ""
             },
             "require": {
                 "blueimp/jquery-file-upload": "9.7.*",
                 "components/bootstrap": "3.2.*",
                 "components/font-awesome": "4.1.*",
-                "components/jplayer": "dev-master",
                 "components/jquery": "1.*",
                 "components/jqueryui": "1.11.*",
                 "components/jqueryui-theme-bootstrap": "dev-master",
                 "dandelionmood/lastfm": "*",
                 "doctrine/doctrine-fixtures-bundle": "2.2.*",
+                "happyworm/jplayer": "v2.7.1",
                 "liip/imagine-bundle": "1.0.*",
                 "madcoda/php-youtube-api": "dev-master",
                 "nass600/get-id3": "dev-master",
@@ -2867,7 +2866,7 @@
                 "player",
                 "playlist"
             ],
-            "time": "2014-11-02 19:55:05"
+            "time": "2014-11-09 19:02:19"
         },
         {
             "name": "twig/extensions",
@@ -3036,7 +3035,6 @@
     "stability-flags": {
         "tabernicola/jukecloud-bundle": 20,
         "nass600/get-id3": 20,
-        "components/jplayer": 20,
         "madcoda/php-youtube-api": 20,
         "components/jqueryui-theme-bootstrap": 20,
         "liip/theme-bundle": 20
